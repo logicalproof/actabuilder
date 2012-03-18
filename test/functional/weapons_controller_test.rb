@@ -3,6 +3,7 @@ require 'test_helper'
 class WeaponsControllerTest < ActionController::TestCase
   setup do
     @weapon = weapons(:one)
+    @update = {name: 'Mulligan Cannon', range: 24, special: 'Devastating +2'}
   end
 
   test "should get index" do
@@ -18,7 +19,7 @@ class WeaponsControllerTest < ActionController::TestCase
 
   test "should create weapon" do
     assert_difference('Weapon.count') do
-      post :create, weapon: @weapon.attributes
+      post :create, weapon: @update
     end
 
     assert_redirected_to weapon_path(assigns(:weapon))
@@ -35,7 +36,7 @@ class WeaponsControllerTest < ActionController::TestCase
   end
 
   test "should update weapon" do
-    put :update, id: @weapon, weapon: @weapon.attributes
+    put :update, id: @weapon, weapon: @update
     assert_redirected_to weapon_path(assigns(:weapon))
   end
 

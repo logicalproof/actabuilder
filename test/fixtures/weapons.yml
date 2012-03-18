@@ -9,3 +9,9 @@ two:
   name: MyString
   range: 1
   special: MyString
+
+phaser:
+  name: Phaser
+  range: 18
+  special: Accurate +2, Kill ZOne 8, Precise
+  
