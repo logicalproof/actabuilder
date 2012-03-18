@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @ship.name %>
+</p>
+
+<p>
+  <b>Cost:</b>
+  <%= @ship.cost %>
+</p>
+
+<p>
+  <b>Image url:</b>
+  <%= @ship.image_url %>
+</p>
+
+<p>
+  <b>Empire:</b>
+  <%= @ship.empire %>
+</p>
+
+
+<%= link_to 'Edit', edit_ship_path(@ship) %> |
+<%= link_to 'Back', ships_path %>

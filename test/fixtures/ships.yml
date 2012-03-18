@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  name: MyString
+  cost: 1
+  image_url: MyString
+  empire: MyString
+
+two:
+  name: MyString
+  cost: 1
+  image_url: MyString
+  empire: MyString

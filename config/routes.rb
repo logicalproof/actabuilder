@@ -1,4 +1,6 @@
 Actabuilder::Application.routes.draw do
+  resources :ships
+
   resources :weapons
 
   # The priority is based upon order of creation:
