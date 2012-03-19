@@ -3,6 +3,7 @@ require 'test_helper'
 class ShipsControllerTest < ActionController::TestCase
   setup do
     @ship = ships(:one)
+    @update = {name: 'Mulligan Cruiser', cost: 125, image_url: 'sfklingond6_2.jpg', empire: 'Klingoninsignia.jpg'}
   end
 
   test "should get index" do
@@ -18,7 +19,7 @@ class ShipsControllerTest < ActionController::TestCase
 
   test "should create ship" do
     assert_difference('Ship.count') do
-      post :create, ship: @ship.attributes
+      post :create, ship: @update
     end
 
     assert_redirected_to ship_path(assigns(:ship))
@@ -35,7 +36,7 @@ class ShipsControllerTest < ActionController::TestCase
   end
 
   test "should update ship" do
-    put :update, id: @ship, ship: @ship.attributes
+    put :update, id: @ship, ship: @update
     assert_redirected_to ship_path(assigns(:ship))
   end
 
