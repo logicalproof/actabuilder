@@ -42,7 +42,7 @@ class AssignedShipsController < ApplicationController
   def create
     @fleet_list = current_fleet_list
     ship = Ship.find(params[:ship_id])
-    @assigned_ship = @fleet_list.assigned_ships.build(ship: ship)
+    @assigned_ship = @fleet_list.add_ship(ship.id)
 
     respond_to do |format|
       if @assigned_ship.save

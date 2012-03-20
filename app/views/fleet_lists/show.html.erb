@@ -5,7 +5,7 @@
 <h2>Your Fleet List</h2>
 <ul>
 	<% @fleet_list.assigned_ships.each do |assignment| %>
-	<li><%= assignment.ship.name%></li>
+	<li><%= assignment.quantity %> &times; <%= assignment.ship.name%></li>
 	<% end %>
 </ul>
 
