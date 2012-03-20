@@ -1,0 +1,21 @@
+<h1>Listing fleet_lists</h1>
+
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @fleet_lists.each do |fleet_list| %>
+  <tr>
+    <td><%= link_to 'Show', fleet_list %></td>
+    <td><%= link_to 'Edit', edit_fleet_list_path(fleet_list) %></td>
+    <td><%= link_to 'Destroy', fleet_list, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Fleet list', new_fleet_list_path %>

@@ -1,4 +1,8 @@
 Actabuilder::Application.routes.draw do
+  resources :assigned_ships
+
+  resources :fleet_lists
+
   get "store/index"
 
   resources :ships

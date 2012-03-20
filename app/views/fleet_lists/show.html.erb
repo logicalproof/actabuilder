@@ -1,0 +1,13 @@
+<% if notice %>
+<p id="notice"><%= notice %></p>
+<% end %>
+
+<h2>Your Fleet List</h2>
+<ul>
+	<% @fleet_list.assigned_ships.each do |assignment| %>
+	<li><%= assignment.ship.name%></li>
+	<% end %>
+</ul>
+
+<%= link_to 'Edit', edit_fleet_list_path(@fleet_list) %> |
+<%= link_to 'Back', fleet_lists_path %>

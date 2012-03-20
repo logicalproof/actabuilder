@@ -4,16 +4,16 @@ one:
   name: MyString
   cost: 1
   image_url: MyString
-  empire: MyString
+  empire_image: MyString
 
 two:
   name: MyString
   cost: 1
   image_url: MyString
-  empire: MyString
+  empire_image: MyString
 
 cruiser:
   name: Amarillo-Class Cruiser
   cost: 175
   image_url: sffedhvycruiser2.jpg
-  empire: UFofPlanetsinsignia.jpg
+  empire_image: UFofPlanetsinsignia.jpg

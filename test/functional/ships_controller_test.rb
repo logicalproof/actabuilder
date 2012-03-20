@@ -3,7 +3,7 @@ require 'test_helper'
 class ShipsControllerTest < ActionController::TestCase
   setup do
     @ship = ships(:one)
-    @update = {name: 'Mulligan Cruiser', cost: 125, image_url: 'sfklingond6_2.jpg', empire: 'Klingoninsignia.jpg'}
+    @update = {name: 'Mulligan Cruiser', cost: 125, image_url: 'sfklingond6_2.jpg', empire_image: 'Klingoninsignia.jpg'}
   end
 
   test "should get index" do

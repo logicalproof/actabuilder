@@ -1,4 +1,6 @@
 class Ship < ActiveRecord::Base
+  has_many :assigned_ships
+  
   validates :cost, numericality: {greater_than: 0}
   validates :name, :empire_image, :cost, presence: true
   validates_uniqueness_of :name, :scope => :empire_image

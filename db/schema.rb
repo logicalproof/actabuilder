@@ -11,7 +11,19 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120320010647) do
+ActiveRecord::Schema.define(:version => 20120320021532) do
+
+  create_table "assigned_ships", :force => true do |t|
+    t.integer  "ship_id"
+    t.integer  "fleet_list_id"
+    t.datetime "created_at",    :null => false
+    t.datetime "updated_at",    :null => false
+  end
+
+  create_table "fleet_lists", :force => true do |t|
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
 
   create_table "ships", :force => true do |t|
     t.string   "name"
