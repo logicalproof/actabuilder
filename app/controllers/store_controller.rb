@@ -1,5 +1,5 @@
 class StoreController < ApplicationController
   def index
-    @ships = Ship.order(:empire, :cost, :name)
+    @ships = Ship.order(:empire_image, :cost, :name)
   end
 end

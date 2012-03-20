@@ -4,7 +4,7 @@
   <% @ships.each do |ship| %>
 	<tr class="<%= cycle('list_line_odd', 'list_line_even') %>">
       <td>
-        <%= image_tag(ship.empire, class: 'list_image_empire') %>
+        <%= image_tag(ship.empire_image, class: 'list_image_empire') %>
       </td>  
       <td class="list_name">
     	<dl>

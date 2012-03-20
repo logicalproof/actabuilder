@@ -11,15 +11,22 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120318213500) do
+ActiveRecord::Schema.define(:version => 20120320010647) do
 
   create_table "ships", :force => true do |t|
     t.string   "name"
     t.integer  "cost"
     t.string   "image_url"
-    t.string   "empire"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.string   "empire_image"
+    t.datetime "created_at",    :null => false
+    t.datetime "updated_at",    :null => false
+    t.integer  "turn"
+    t.integer  "marines"
+    t.string   "craft"
+    t.string   "traits"
+    t.integer  "damage"
+    t.integer  "cripple_value"
+    t.integer  "shield"
   end
 
   create_table "weapons", :force => true do |t|
