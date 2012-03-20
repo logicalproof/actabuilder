@@ -46,7 +46,7 @@ class AssignedShipsController < ApplicationController
 
     respond_to do |format|
       if @assigned_ship.save
-        format.html { redirect_to @assigned_ship.fleet_list }
+        format.html { redirect_to store_index_url }
         format.json { render json: @assigned_ship, status: :created, location: @assigned_ship }
       else
         format.html { render action: "new" }

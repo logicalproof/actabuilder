@@ -2,21 +2,4 @@
 <p id="notice"><%= notice %></p>
 <% end %>
 
-<div class="fleet_list_title">Your Fleet List</div>
-<table>
-  <% @fleet_list.assigned_ships.each do |assignment| %>
-    <tr>
-  	  <td><%= assignment.quantity %>&times;</td>
-  	  <td><%= assignment.ship.name %></td>
-  	  <td class="ship_cost"><%= assignment.total_cost %></td>
-    </tr>
-  <% end %>
-  <tr class="total_line">
-  	<td colspan="2">Total</td>
-  	<td class="total_cell"><%= @fleet_list.total_cost %></td>
-  </tr>	
-</table>	
-
-<%= button_to 'Delete Assignments', @fleet_list, method: :delete, confirm: 'Are you sure?' %>
-<%= link_to 'Edit', edit_fleet_list_path(@fleet_list) %> |
-<%= link_to 'Back', fleet_lists_path %>
+<%= render @fleet_list %>

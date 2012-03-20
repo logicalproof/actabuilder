@@ -1,0 +1,10 @@
+<div class="fleet_list_title">Your Fleet List</div>
+<table>
+  <%= render(fleet_list.assigned_ships) %>
+  <tr class="total_line">
+  	<td colspan="2">Total</td>
+  	<td class="total_cell"><%= fleet_list.total_cost %></td>
+  </tr>	
+</table>	
+
+<%= button_to 'Delete Assignments', fleet_list, method: :delete, confirm: 'Are you sure?' %>
