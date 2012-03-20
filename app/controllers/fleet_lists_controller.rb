@@ -13,11 +13,16 @@ class FleetListsController < ApplicationController
   # GET /fleet_lists/1
   # GET /fleet_lists/1.json
   def show
-    @fleet_list = FleetList.find(params[:id])
-
-    respond_to do |format|
-      format.html # show.html.erb
-      format.json { render json: @fleet_list }
+    begin
+      @fleet_list = FleetList.find(params[:id])
+    rescue ActiveRecord::RecordNotFound
+      logger.error "Attempt to access invalid fleet list#{params[:id]}"
+      redirect_to store_index_url, notice: 'Invalid Fleet List'
+    else
+      respond_to do |format|
+        format.html # show.html.erb
+        format.json { render json: @fleet_list }
+      end
     end
   end
 
@@ -72,11 +77,11 @@ class FleetListsController < ApplicationController
   # DELETE /fleet_lists/1
   # DELETE /fleet_lists/1.json
   def destroy
-    @fleet_list = FleetList.find(params[:id])
+    @fleet_list = current_fleet_list
     @fleet_list.destroy
-
+    session[:fleet_list_id] = nil
     respond_to do |format|
-      format.html { redirect_to fleet_lists_url }
+      format.html { redirect_to store_index_url, notice: "Your Fleet is currently empty" }
       format.json { head :no_content }
     end
   end

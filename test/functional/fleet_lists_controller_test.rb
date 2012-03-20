@@ -41,9 +41,10 @@ class FleetListsControllerTest < ActionController::TestCase
 
   test "should destroy fleet_list" do
     assert_difference('FleetList.count', -1) do
+      session[:fleet_list_id] = @fleet_list.id
       delete :destroy, id: @fleet_list
     end
 
-    assert_redirected_to fleet_lists_path
+    assert_redirected_to store_index_path
   end
 end

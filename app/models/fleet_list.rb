@@ -10,4 +10,8 @@ class FleetList < ActiveRecord::Base
     end
     current_assignment
   end
+  
+  def total_cost
+    assigned_ships.to_a.sum { |item| item.total_cost }
+  end
 end
