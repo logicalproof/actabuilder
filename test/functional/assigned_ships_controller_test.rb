@@ -21,7 +21,7 @@ class AssignedShipsControllerTest < ActionController::TestCase
       post :create, ship_id: ships(:cruiser).id
     end
 
-    assert_redirected_to fleet_list_path(assigns(:assigned_ship).fleet_list)
+    assert_redirected_to store_index_path
   end
 
   test "should show assigned_ship" do

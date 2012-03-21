@@ -1,0 +1,5 @@
+if ($('#assigned_ship tr').length == 1) { $('#cart').show('blind', 1000); }
+
+$('#fleet_list').html("<%=j render @fleet_list %>");
+
+$('#current_assigned_ship').css({'background-color':'#88ff88'}).animate({'background-color':'#114411'}, 1000);

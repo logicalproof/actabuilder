@@ -15,9 +15,13 @@
   </div>
   <div id="columns">
   	<div id="side">
+  		<% if @fleet_list %>
   	  <div id="fleet_list">
+  	  	<%= hidden_div_if(@fleet_list.assigned_ships.empty?, id: 'fleet_list') do%>
   	  	<%= render @fleet_list %>
+  	  	<% end %>
   	  </div>
+  	  <% end %>
       <ul>
       	<li><a href="http://localhost:3000">Home</a></li>
       	<li><a href="http://localhost:3000/ships">Ship List</a></li>

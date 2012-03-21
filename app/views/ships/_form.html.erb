@@ -24,8 +24,8 @@
     <%= f.text_field :image_url %>
   </div>
   <div class="field">
-    <%= f.label :empire_image %><br />
-    <%= f.text_field :empire_image %>
+    <%= f.label :empire_image, "Empire" %><br />
+    <%= f.select :empire_image, Ship::EMPIRES, prompt: 'Select an Empire' %>
   </div>
   <div class="field">
     <%= f.label :craft %><br />

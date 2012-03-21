@@ -81,7 +81,7 @@ class FleetListsController < ApplicationController
     @fleet_list.destroy
     session[:fleet_list_id] = nil
     respond_to do |format|
-      format.html { redirect_to store_index_url, notice: "Your Fleet is currently empty" }
+      format.html { redirect_to store_index_url }
       format.json { head :no_content }
     end
   end
