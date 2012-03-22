@@ -7,5 +7,8 @@ class Ship < ActiveRecord::Base
   validates :empire_image, allow_blank: false, format: { with: %r{\.(gif|jpg|png)$}i, message: 'must be a URL for GIF, JPG or PNG image'}
   validates :image_url, allow_blank: true, format: { with: %r{\.(gif|jpg|png)$}i, message: 'must be a URL for GIF, JPG or PNG image'}
   
-  EMPIRES = {"Klingon" => "Klingoninsignia.jpg", "Federation" => "Federationinsignia.jpg", "Gorn" => "Gorninsignia.jpg", "Romulan" => "Romulaninsignia.jpg", "Kzinti" => "Kzintiinsignia.jpg", "Tholian" => "Tholianinsignia.jpg", "Orion" => "Orioninsignia.jpg"}.sort
+  EMPIRES = {"Federation" => "Federationinsignia.jpg", "Gorn" => "Gorninsignia.jpg", "Klingon" => "Klingoninsignia.jpg", "Kzinti" => "Kzintiinsignia.jpg", "Orion" => "Orioninsignia.jpg", "Romulan" => "Romulaninsignia.jpg", "Tholian" => "Tholianinsignia.jpg"}
+  CRAFT = ["1 Shuttle", "2 Shuttles", "3 Shuttles", "4 Shuttles", "5 Shuttles", "6 Shuttles", "7 Shuttles", "8 Shuttles"]
+  
+
 end

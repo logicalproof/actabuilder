@@ -29,11 +29,7 @@
   </div>
   <div class="field">
     <%= f.label :craft %><br />
-    <%= f.text_field :craft %>
-  </div>
-  <div class="field">
-    <%= f.label :traits %><br />
-    <%= f.text_field :traits %>
+    <%= f.select :craft, Ship::CRAFT, Prompt: 'Select Shuttles' %>
   </div>
   <div class="field">
     <%= f.label :turn %><br />
@@ -55,7 +51,12 @@
     <%= f.label :cripple_value %><br />
     <%= f.number_field :cripple_value %>
   </div>
+  <div class="field">
+  	<%= f.label :weapon_system %><br />
+    <%= f.number_field :weapon_system %>
+  </div>
   <div class="actions">
     <%= f.submit %>
   </div>
+  
 <% end %>

@@ -10,6 +10,9 @@
 <% @ships.each do |ship| %>
   <div class="entry">
   	<%= image_tag(ship.empire_image) %><h3><%= ship.name %><span class="ship_pic"><%= image_tag(ship.image_url)%></span></h3>
+  	<div class ="empire">
+  		<%= Ship::EMPIRES.key(ship.empire_image) %>
+  	</div>
   	
     <div class="cost_line">
       <span class="cost">Cost: <%= ship.cost %></span>

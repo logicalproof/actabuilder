@@ -9,6 +9,7 @@
       <td class="list_name">
     	<dl>
     		<dt><%= ship.name %></dt>
+    		<dd><%= Ship::EMPIRES.key(ship.empire_image) %></dd>
     		<dd>Cost: <b><%= ship.cost %></b></dd>
     	</dl>
       </td>

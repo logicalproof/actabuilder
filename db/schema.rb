@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120320033947) do
+ActiveRecord::Schema.define(:version => 20120322232236) do
 
   create_table "assigned_ships", :force => true do |t|
     t.integer  "ship_id"
@@ -31,15 +31,15 @@ ActiveRecord::Schema.define(:version => 20120320033947) do
     t.integer  "cost"
     t.string   "image_url"
     t.string   "empire_image"
-    t.datetime "created_at",    :null => false
-    t.datetime "updated_at",    :null => false
+    t.datetime "created_at",                   :null => false
+    t.datetime "updated_at",                   :null => false
     t.integer  "turn"
     t.integer  "marines"
     t.string   "craft"
-    t.string   "traits"
     t.integer  "damage"
     t.integer  "cripple_value"
     t.integer  "shield"
+    t.integer  "weapon_system", :default => 0
   end
 
   create_table "weapons", :force => true do |t|
