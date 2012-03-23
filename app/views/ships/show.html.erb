@@ -44,7 +44,11 @@
   <b>Craft: </b>
   <%= @ship.craft%>
 </p>
-
+<% if @ship.enhanced_bridge %>
+<p>
+  <b>Enhanced Bridge</b>
+</p>
+<% end %>
 
 <%= link_to 'Edit', edit_ship_path(@ship) %> |
 <%= link_to 'Back', ships_path %>
