@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120323221105) do
+ActiveRecord::Schema.define(:version => 20120325140846) do
 
   create_table "assigned_ships", :force => true do |t|
     t.integer  "ship_id"
@@ -31,38 +31,32 @@ ActiveRecord::Schema.define(:version => 20120323221105) do
     t.integer  "cost"
     t.string   "image_url"
     t.string   "empire_image"
-    t.datetime "created_at",                   :null => false
-    t.datetime "updated_at",                   :null => false
+    t.datetime "created_at",                         :null => false
+    t.datetime "updated_at",                         :null => false
     t.integer  "turn"
     t.integer  "marines"
     t.string   "craft"
     t.integer  "damage"
     t.integer  "cripple_value"
     t.integer  "shield"
-    t.integer  "weapon_system", :default => 0
-  end
-
-  create_table "traits", :force => true do |t|
-    t.integer  "anti_drone"
-    t.boolean  "armoured"
-    t.string   "cloak"
-    t.integer  "command"
-    t.boolean  "enhanced_bridge"
-    t.boolean  "fast"
-    t.boolean  "immobile"
-    t.integer  "labs"
-    t.boolean  "lumbering"
-    t.boolean  "probes"
-    t.boolean  "quick_launch"
-    t.boolean  "scout"
-    t.boolean  "slow"
-    t.integer  "stealth"
-    t.integer  "tractor_beam"
-    t.integer  "transporter"
-    t.datetime "created_at",      :null => false
-    t.datetime "updated_at",      :null => false
-    t.integer  "ship_id"
-    t.boolean  "agile"
+    t.integer  "weapon_system",   :default => 0
+    t.boolean  "agile",           :default => false
+    t.integer  "anti_drone",      :default => 0
+    t.boolean  "armoured",        :default => false
+    t.boolean  "cloak",           :default => false
+    t.integer  "command",         :default => 0
+    t.boolean  "enhanced_bridge", :default => false
+    t.boolean  "fast",            :default => false
+    t.boolean  "immobile",        :default => false
+    t.integer  "labs",            :default => 0
+    t.boolean  "lumbering",       :default => false
+    t.boolean  "probes",          :default => true
+    t.boolean  "quick_launch",    :default => false
+    t.boolean  "scout",           :default => false
+    t.boolean  "slow",            :default => false
+    t.integer  "stealth",         :default => 0
+    t.integer  "tractor_beam",    :default => 0
+    t.integer  "transporter",     :default => 0
   end
 
   create_table "weapons", :force => true do |t|
