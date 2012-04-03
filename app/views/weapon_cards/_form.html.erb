@@ -1,0 +1,33 @@
+<%= form_for(@weapon_card) do |f| %>
+  <% if @weapon_card.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@weapon_card.errors.count, "error") %> prohibited this weapon_card from being saved:</h2>
+
+      <ul>
+      <% @weapon_card.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :ship_id %><br />
+    <%= f.number_field :ship_id %>
+  </div>
+  <div class="field">
+    <%= f.label :weapon_id %><br />
+    <%= f.select :weapon_id, @weapon_names, prompt: "Select your weapon" %>
+  </div>
+  <div class="field">
+    <%= f.label :attack_dice %><br />
+    <%= f.number_field :attack_dice %>
+  </div>
+  <div class="field">
+    <%= f.label :arc %><br />
+    <%= f.text_field :arc %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

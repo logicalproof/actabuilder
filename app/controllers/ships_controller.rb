@@ -41,7 +41,6 @@ class ShipsController < ApplicationController
   # POST /ships.json
   def create
     @ship = Ship.new(params[:ship])
-
     respond_to do |format|
       if @ship.save
         format.html { redirect_to @ship, notice: 'Ship was successfully created.' }

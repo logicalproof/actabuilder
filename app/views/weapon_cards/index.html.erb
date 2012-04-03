@@ -1,0 +1,29 @@
+<h1>Listing weapon_cards</h1>
+
+<table>
+  <tr>
+    <th>Ship</th>
+    <th>Weapon</th>
+    <th>Attack dice</th>
+    <th>Arc</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @weapon_cards.each do |weapon_card| %>
+  <tr>
+    <td><%= weapon_card.ship_id %></td>
+    <td><%= weapon_card.weapon_id %></td>
+    <td><%= weapon_card.attack_dice %></td>
+    <td><%= weapon_card.arc %></td>
+    <td><%= link_to 'Show', weapon_card %></td>
+    <td><%= link_to 'Edit', edit_weapon_card_path(weapon_card) %></td>
+    <td><%= link_to 'Destroy', weapon_card, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Weapon card', new_weapon_card_path %>

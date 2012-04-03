@@ -1,6 +1,6 @@
 class Ship < ActiveRecord::Base
   has_many :assigned_ships
-  
+  has_many :weapon_cards
   validates :cost, numericality: {greater_than: 0}
   validates :name, :empire_image, :cost, presence: true
   validates_uniqueness_of :name, :scope => :empire_image
@@ -9,6 +9,8 @@ class Ship < ActiveRecord::Base
   
   EMPIRES = {"Federation" => "Federationinsignia.jpg", "Gorn" => "Gorninsignia.jpg", "Klingon" => "Klingoninsignia.jpg", "Kzinti" => "Kzintiinsignia.jpg", "Orion" => "Orioninsignia.jpg", "Romulan" => "Romulaninsignia.jpg", "Tholian" => "Tholianinsignia.jpg"}
   CRAFT = ["1 Shuttle", "2 Shuttles", "3 Shuttles", "4 Shuttles", "5 Shuttles", "6 Shuttles", "7 Shuttles", "8 Shuttles"]
-  
-
+  Weapon_names = []
+  Weapon.all.each do |name|
+    Weapon_names << name.name
+  end
 end

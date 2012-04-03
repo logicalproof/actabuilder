@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Ship:</b>
+  <%= @weapon_card.ship_id %>
+</p>
+
+<p>
+  <b>Weapon:</b>
+  <%= @weapon_card.weapon_id %>
+</p>
+
+<p>
+  <b>Attack dice:</b>
+  <%= @weapon_card.attack_dice %>
+</p>
+
+<p>
+  <b>Arc:</b>
+  <%= @weapon_card.arc %>
+</p>
+
+
+<%= link_to 'Edit', edit_weapon_card_path(@weapon_card) %> |
+<%= link_to 'Back', weapon_cards_path %>

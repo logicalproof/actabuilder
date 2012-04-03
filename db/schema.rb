@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120322232236) do
+ActiveRecord::Schema.define(:version => 20120401041013) do
 
   create_table "assigned_ships", :force => true do |t|
     t.integer  "ship_id"
@@ -40,6 +40,15 @@ ActiveRecord::Schema.define(:version => 20120322232236) do
     t.integer  "cripple_value"
     t.integer  "shield"
     t.integer  "weapon_system", :default => 0
+  end
+
+  create_table "weapon_cards", :force => true do |t|
+    t.integer  "ship_id"
+    t.integer  "weapon_id"
+    t.integer  "attack_dice"
+    t.string   "arc"
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
   end
 
   create_table "weapons", :force => true do |t|

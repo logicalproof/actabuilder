@@ -1,4 +1,6 @@
 Actabuilder::Application.routes.draw do
+  resources :weapon_cards
+
   resources :assigned_ships
 
   resources :fleet_lists

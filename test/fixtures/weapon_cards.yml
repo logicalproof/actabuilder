@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  ship_id: 1
+  weapon_id: 1
+  attack_dice: 1
+  arc: MyString
+
+two:
+  ship_id: 1
+  weapon_id: 1
+  attack_dice: 1
+  arc: MyString
