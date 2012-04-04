@@ -9,6 +9,7 @@ class Ship < ActiveRecord::Base
   
   EMPIRES = {"Federation" => "Federationinsignia.jpg", "Gorn" => "Gorninsignia.jpg", "Klingon" => "Klingoninsignia.jpg", "Kzinti" => "Kzintiinsignia.jpg", "Orion" => "Orioninsignia.jpg", "Romulan" => "Romulaninsignia.jpg", "Tholian" => "Tholianinsignia.jpg"}
   CRAFT = ["1 Shuttle", "2 Shuttles", "3 Shuttles", "4 Shuttles", "5 Shuttles", "6 Shuttles", "7 Shuttles", "8 Shuttles"]
+  TRAIT_NUMBERS = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
   Weapon_names = {}
   Weapon.all.each do |name|
     Weapon_names[name.name] = name.id

@@ -3,26 +3,24 @@
 	<%= notice %>
   </p>
 <% end %>
+<div class="ship_header">
+<p>
+  <b>Empire:</b>
+  <%= image_tag(@ship.empire_image, class: 'list_image_empire') %>
+</p>
 <p>
   <b>Name:</b>
   <%= @ship.name %>
 </p>
-
+<p>
+  <b>Image url:</b>
+  <%= image_tag(@ship.image_url, class: 'list_image_ship')%>
+</p>
+</div>
 <p>
   <b>Cost:</b>
   <%= @ship.cost %>
 </p>
-
-<p>
-  <b>Image url:</b>
-  <%= @ship.image_url %>
-</p>
-
-<p>
-  <b>Empire:</b>
-  <%= @ship.empire_image %>
-</p>
-
 <p>
   <b>Turn: </b>
   <%= @ship.turn%>
@@ -47,6 +45,93 @@
   <b>Craft: </b>
   <%= @ship.craft%>
 </p>
+
+<div id="traits">
+<p>
+<% if @ship.agile %>
+  <b>Agile </b>| 
+<% end %>
+</p>
+<p>
+<% unless @ship.anti_drone == 0 %>
+  <b>Anti-Drone </b><%= @ship.anti_drone %> | 
+<% end %>
+</p>
+<p>
+<% if @ship.armoured %>
+  <b>Armoured </b>| 
+<% end %>
+</p>
+<p>
+<% if @ship.cloak %>
+  <b>Cloak </b>| 
+<% end %>
+</p>
+<p>
+<% unless @ship.command == 0 %>
+  <b>Command </b>+<%= @ship.command %> | 
+<% end %>
+</p>
+<p>
+<% if @ship.enhanced_bridge %>
+  <b>Enhanced Bridge </b>| 
+<% end %>
+</p>
+<p>
+<% if @ship.fast %>
+  <b>Fast </b>| 
+<% end %>
+</p>
+<p>
+<% if @ship.immobile %>
+  <b>Immobile </b>| 
+<% end %>
+</p>
+<p>
+<% unless @ship.labs == 0 %>
+  <b>Labs</b> <%= @ship.labs %> | 
+<% end %>
+</p>
+<p>
+<% if @ship.lumbering %>
+  <b>Lumbering </b>| 
+<% end %>
+</p>
+<p>
+<% if @ship.no_probes %>
+  <b>No Probes </b>| 
+<% end %>
+</p>
+<p>
+<% if @ship.quick_launch %>
+  <b>Quick Launch </b>| 
+<% end %>
+</p>
+<p>
+<% if @ship.scout %>
+  <b>Scout </b>| 
+<% end %>
+</p>
+<p>
+<% if @ship.slow %>
+  <b>Slow </b>| 
+<% end %>
+</p>
+<p>
+<% unless @ship.stealth == 0 %>
+  <b>Stealth </b><%= @ship.stealth %> | 
+<% end %>
+</p>
+<p>
+<% unless @ship.tractor_beam == 0 %>
+  <b>Tractor Beams </b><%= @ship.tractor_beam %> | 
+<% end %>
+</p>
+<p>
+<% unless @ship.transporter == 0 %>
+  <b>Transporters </b><%= @ship.transporter %> | 
+<% end %>
+</p></div>
 <p>
 	
 	<b>Weapons:</b>
