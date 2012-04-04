@@ -14,7 +14,8 @@ class ShipsController < ApplicationController
   # GET /ships/1.json
   def show
     @ship = Ship.find(params[:id])
-
+    @weapon = WeaponCard.find_by_ship_id(params[:id])
+    
     respond_to do |format|
       format.html # show.html.erb
       format.json { render json: @ship }

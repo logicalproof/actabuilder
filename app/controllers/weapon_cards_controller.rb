@@ -25,9 +25,9 @@ class WeaponCardsController < ApplicationController
   # GET /weapon_cards/new.json
   def new
     weapon_names = Weapon.all
-    @weapon_names = []
+    @weapon_names = {}
     weapon_names.each do |name|
-      @weapon_names << name.name
+      @weapon_names[name.name] = name.id
     end
     
     ship = Ship.find(params[:ship_id])
@@ -47,11 +47,12 @@ class WeaponCardsController < ApplicationController
   # POST /weapon_cards.json
   def create
     @weapon_names = Weapon.all
-    
+   
     @weapon_card = WeaponCard.new(params[:weapon_card])
+     @ship = Ship.find(@weapon_card.ship_id)
     respond_to do |format|
       if @weapon_card.save
-        format.html { redirect_to @weapon_card, notice: 'Weapon card was successfully created.' }
+        format.html { redirect_to @ship, notice: 'Weapon card was successfully created.' }
         format.json { render json: @weapon_card, status: :created, location: @weapon_card }
       else
         format.html { render action: "new" }

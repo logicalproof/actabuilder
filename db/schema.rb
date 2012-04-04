@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120401041013) do
+ActiveRecord::Schema.define(:version => 20120404033212) do
 
   create_table "assigned_ships", :force => true do |t|
     t.integer  "ship_id"
@@ -31,15 +31,31 @@ ActiveRecord::Schema.define(:version => 20120401041013) do
     t.integer  "cost"
     t.string   "image_url"
     t.string   "empire_image"
-    t.datetime "created_at",                   :null => false
-    t.datetime "updated_at",                   :null => false
+    t.datetime "created_at",                         :null => false
+    t.datetime "updated_at",                         :null => false
     t.integer  "turn"
     t.integer  "marines"
     t.string   "craft"
     t.integer  "damage"
     t.integer  "cripple_value"
     t.integer  "shield"
-    t.integer  "weapon_system", :default => 0
+    t.boolean  "agile",           :default => false
+    t.integer  "anti_drone",      :default => 0
+    t.boolean  "armoured",        :default => false
+    t.boolean  "cloak",           :default => false
+    t.integer  "command",         :default => 0
+    t.boolean  "enhanced_bridge", :default => false
+    t.boolean  "fast",            :default => false
+    t.boolean  "immobile",        :default => false
+    t.integer  "labs",            :default => 0
+    t.boolean  "lumbering",       :default => false
+    t.boolean  "no_probes",       :default => false
+    t.boolean  "quick_launch",    :default => false
+    t.boolean  "scout",           :default => false
+    t.boolean  "slow",            :default => false
+    t.integer  "stealth",         :default => 0
+    t.integer  "tractor_beam",    :default => 0
+    t.integer  "transporter",     :default => 0
   end
 
   create_table "weapon_cards", :force => true do |t|

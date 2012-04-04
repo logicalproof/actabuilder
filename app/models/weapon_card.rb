@@ -1,4 +1,4 @@
 class WeaponCard < ActiveRecord::Base
   belongs_to :ship
-  belongs_to :weapon
+  has_many :weapons
 end

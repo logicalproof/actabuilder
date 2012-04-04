@@ -1,5 +1,8 @@
-<p id="notice"><%= notice %></p>
-
+<% if notice %>
+  <p id="notice">
+	<%= notice %>
+  </p>
+<% end %>
 <p>
   <b>Name:</b>
   <%= @ship.name %>
@@ -43,6 +46,14 @@
 <p>
   <b>Craft: </b>
   <%= @ship.craft%>
+</p>
+<p>
+	
+	<b>Weapons:</b>
+	<% @ship.weapon_cards.each do |card| %>
+	<p><b>NAME:</b> <%= Weapon.find(card.weapon_id).name %> | <b>Range:</b> <%= Weapon.find(card.weapon_id).range %> | <b>ARC:</b> <%= card.arc %> | <b>AD:</b> <%= card.attack_dice %> | <b>Special:</b> <%= Weapon.find(card.weapon_id).special %></p>
+	<% end %>
+	
 </p>
 
 
