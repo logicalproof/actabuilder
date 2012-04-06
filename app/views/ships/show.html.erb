@@ -3,144 +3,133 @@
 	<%= notice %>
   </p>
 <% end %>
-<div class="ship_header">
-<p>
-  <b>Empire:</b>
-  <%= image_tag(@ship.empire_image, class: 'list_image_empire') %>
-</p>
-<p>
-  <b>Name:</b>
-  <%= @ship.name %>
-</p>
-<p>
-  <b>Image url:</b>
-  <%= image_tag(@ship.image_url, class: 'list_image_ship')%>
-</p>
+<div id="ship_header">
+    <%= image_tag(@ship.empire_image, class: 'list_image_empire') %>
+    <h2><%= @ship.name %></h2>
+    <p> <%= @ship.cost %> points</p>
+        <%= image_tag(@ship.image_url, class: 'list_image_ship')%>
 </div>
-<p>
-  <b>Cost:</b>
-  <%= @ship.cost %>
-</p>
-<p>
-  <b>Turn: </b>
-  <%= @ship.turn%>
-</p>
-<p>
-  <b>Damage: </b>
-  <%= @ship.damage%>
-</p>
-<p>
-  <b>Crippled At: </b>
-  <%= @ship.cripple_value%>
-</p>
-<p>
-  <b>Shields: </b>
-  <%= @ship.shield%>
-</p>
-<p>
-  <b>Marines: </b>
-  <%= @ship.marines%>
-</p>
-<p>
-  <b>Craft: </b>
-  <%= @ship.craft%>
-</p>
 
-<div id="traits">
-<p>
-<% if @ship.agile %>
-  <b>Agile </b>| 
-<% end %>
-</p>
-<p>
-<% unless @ship.anti_drone == 0 %>
-  <b>Anti-Drone </b><%= @ship.anti_drone %> | 
-<% end %>
-</p>
-<p>
-<% if @ship.armoured %>
-  <b>Armoured </b>| 
-<% end %>
-</p>
-<p>
-<% if @ship.cloak %>
-  <b>Cloak </b>| 
-<% end %>
-</p>
-<p>
-<% unless @ship.command == 0 %>
-  <b>Command </b>+<%= @ship.command %> | 
-<% end %>
-</p>
-<p>
-<% if @ship.enhanced_bridge %>
-  <b>Enhanced Bridge </b>| 
-<% end %>
-</p>
-<p>
-<% if @ship.fast %>
-  <b>Fast </b>| 
-<% end %>
-</p>
-<p>
-<% if @ship.immobile %>
-  <b>Immobile </b>| 
-<% end %>
-</p>
-<p>
-<% unless @ship.labs == 0 %>
-  <b>Labs</b> <%= @ship.labs %> | 
-<% end %>
-</p>
-<p>
-<% if @ship.lumbering %>
-  <b>Lumbering </b>| 
-<% end %>
-</p>
-<p>
-<% if @ship.no_probes %>
-  <b>No Probes </b>| 
-<% end %>
-</p>
-<p>
-<% if @ship.quick_launch %>
-  <b>Quick Launch </b>| 
-<% end %>
-</p>
-<p>
-<% if @ship.scout %>
-  <b>Scout </b>| 
-<% end %>
-</p>
-<p>
-<% if @ship.slow %>
-  <b>Slow </b>| 
-<% end %>
-</p>
-<p>
-<% unless @ship.stealth == 0 %>
-  <b>Stealth </b><%= @ship.stealth %> | 
-<% end %>
-</p>
-<p>
-<% unless @ship.tractor_beam == 0 %>
-  <b>Tractor Beams </b><%= @ship.tractor_beam %> | 
-<% end %>
-</p>
-<p>
-<% unless @ship.transporter == 0 %>
-  <b>Transporters </b><%= @ship.transporter %> | 
-<% end %>
-</p></div>
-<p>
-	
-	<b>Weapons:</b>
-	<% @ship.weapon_cards.each do |card| %>
-	<p><b>NAME:</b> <%= Weapon.find(card.weapon_id).name %> | <b>Range:</b> <%= Weapon.find(card.weapon_id).range %> | <b>ARC:</b> <%= card.arc %> | <b>AD:</b> <%= card.attack_dice %> | <b>Special:</b> <%= Weapon.find(card.weapon_id).special %></p>
-	<% end %>
-	
-</p>
-
+<div id="stats">
+	<h3>Stats</h3>
+	<ul>
+	    <li><b>Turn:</b>        <%= @ship.turn%></li>
+		<li><b>Damage:</b>      <%= @ship.damage%>/<%= @ship.cripple_value%></li>
+		<li><b>Shields:</b>     <%= @ship.shield%></li>
+		<li><b>Marines:</b>     <%= @ship.marines%></li>
+		<li><b>Craft:</b>       <%= @ship.craft%></li>
+	</ul>
+    <div id="traits">
+	    <h3>Traits</h3>
+	    <ul>
+			<% if @ship.agile %>
+			  <li><b>Agile </b></li>
+			<% end %>
+		
+		
+			<% unless @ship.anti_drone == 0 %>
+			  <li><b>Anti-Drone <%= @ship.anti_drone %></b></li>
+			<% end %>
+		
+		
+			<% if @ship.armoured %>
+			  <li><b>Armoured </b></li>
+			<% end %>
+		
+		
+			<% if @ship.cloak %>
+			  <li><b>Cloak </b></li>
+			<% end %>
+		
+		
+			<% unless @ship.command == 0 %>
+			  <li><b>Command + <%= @ship.command %></b></li>
+			<% end %>
+		
+		
+			<% if @ship.enhanced_bridge %>
+			  <li><b>Enhanced Bridge </b></li>
+			<% end %>
+		
+		
+			<% if @ship.fast %>
+			     <li><b>Fast </b></li>
+			<% end %>
+		
+		
+			<% if @ship.immobile %>
+			    <li><b>Immobile </b></li>
+			<% end %>
+		
+		
+			<% unless @ship.labs == 0 %>
+			    <li><b>Labs <%= @ship.labs %></b></li>
+			<% end %>
+		
+		
+			<% if @ship.lumbering %>
+			    <li><b>Lumbering </b></li>
+			<% end %>
+		
+		
+			<% if @ship.no_probes %>
+			    <li><b>No Probes </b></li>
+			<% end %>
+		
+		
+			<% if @ship.quick_launch %>
+			    <li><b>Quick Launch </b></li>
+			<% end %>
+		
+		
+			<% if @ship.scout %>
+			    <li><b>Scout </b></li>
+			<% end %>
+		
+		
+			<% if @ship.slow %>
+			    <li><b>Slow </b></li>
+			<% end %>
+		
+		
+			<% unless @ship.stealth == 0 %>
+			    <li><b>Stealth <%= @ship.stealth %></b></li>
+			<% end %>
+		
+		
+			<% unless @ship.tractor_beam == 0 %>
+			     <li><b>Tractor Beams <%= @ship.tractor_beam %></b></li>
+			<% end %>
+		
+			<% unless @ship.transporter == 0 %>
+			    <li> <b>Transporters <%= @ship.transporter %></b></li>
+			<% end %>
+		</ul>
+	</div>
+</div>
+<div id="weapons_table">
+	<h3>Weapons</h3>
+	<table>
+		<tr>
+			<th>Name</th>
+			<th>Range</th>
+			<th>Arc</th>
+			<th>AD</th>
+			<th>Special</th>
+			<th>Fired</th>
+		</tr>
+		<% @ship.weapon_cards.each do |card| %>
+		<tr>
+			<td><%= Weapon.find(card.weapon_id).name %></td>
+			<td><%= Weapon.find(card.weapon_id).range %></td>
+			<td><%= card.arc %></td>
+			<td><%= card.attack_dice %></td>
+			<td><%= Weapon.find(card.weapon_id).special %></td>
+			<td id="fired"></td>
+		</tr>
+		<% end %>
+	</table>
+</div>
 
 <%= link_to 'Add a Weapon', new_weapon_card_path(:ship_id => @ship.id) %> |
 <%= link_to 'Edit', edit_ship_path(@ship) %> |
