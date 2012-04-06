@@ -3,20 +3,25 @@
 	<%= notice %>
   </p>
 <% end %>
+<div class="span10">
+	<h1>A Call To Arms: Starfleet</h1>
+	<h2>Fleet Builder Catalog</h2>
+<div>
+	
 
-<h1>A Call To Arms: Starfleet</h1>
-<h2>Fleet Builder Catalog</h2>
 
-<% @ships.each do |ship| %>
-  <div class="entry">
-  	<%= image_tag(ship.empire_image) %><h3><%= ship.name %><span class="ship_pic"><%= image_tag(ship.image_url)%></span></h3>
-  	<div class ="empire">
-  		<%= Ship::EMPIRES.key(ship.empire_image) %>
-  	</div>
-  	
-    <div class="cost_line">
-      <span class="cost">Cost: <%= ship.cost %></span>
-      <%= button_to 'Add to Fleet', assigned_ships_path(ship_id: ship), remote: true%>
-    </div>
-  </div>
-<% end %>
+	<% @ships.each do |ship| %>
+	<div class="span10" id="fleet_index">
+		<div class="span4">	
+		    <div><%= image_tag(ship.empire_image) %>
+			<h3><%= ship.name %></h3>
+			 <%= Ship::EMPIRES.key(ship.empire_image) %>
+			</div>
+		</div>
+		<%= image_tag(ship.image_url)%>
+    	Cost: <%= ship.cost %>
+    	<%= button_to 'Add to Fleet', assigned_ships_path(ship_id: ship), remote: true%>
+     </div>
+     <% end %>
+
+

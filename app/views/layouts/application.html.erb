@@ -2,37 +2,46 @@
 <html>
 <head>
   <title>A CALL TO ARMS STAR FLEET</title>
-  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= stylesheet_link_tag    "custom", :media => "all" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
 </head>
 <body class='<%= controller.controller_name %>'>
-
-  
-  <div id="title">
-	  <div id='banner'>
-	  	<%= image_tag("ActaSF.png") %>
-  	<%= @page_title || "Fleet Builder"%>
-  </div>
-</div>
-  <div id="columns">
-  	<div id="side">
-  		<% if @fleet_list %>
-  	  <div id="fleet_list">
-  	  	<%= hidden_div_if(@fleet_list.assigned_ships.empty?, id: 'fleet_list') do%>
-  	  	<%= render @fleet_list %>
-  	  	<% end %>
-  	  </div>
-  	  <% end %>
-      <ul>
-      	<li><a href="http://localhost:3000">Home</a></li>
-      	<li><a href="http://localhost:3000/ships">Ship List</a></li>
-        <li><a href="http://localhost:3000/weapons">Weapons List</a></li>
-      </ul>
-      </div>
-    <div id="main">
+	<div class="navbar">
+	    <div class="navbar-inner">
+	        <div class="container">
+	            <%= image_tag("ActaSF.png", class: "logo") %>
+	            <%= @page_title || "Fleet Builder"%>
+	        </div>
+	    </div>
+	</div>    
+	
+	<div class="container">
+    	<div class="row">
+    		<div class="span2">
+    			<div class="well sidebar-nav">
+    				<ul class="nav nav-list">
+						<li class="nav-header">Sidebar</li>
+						<li><a href="http://localhost:3000">Home</a></li>
+				      	<li><a href="http://localhost:3000/ships">Ship List</a></li>
+				        <li><a href="http://localhost:3000/weapons">Weapons List</a></li>
+    				    <li class="nav-header">Fleetlist</li>
+					</ul>
+					<div><% if @fleet_list %>
+			  	  	  <%= hidden_div_if(@fleet_list.assigned_ships.empty?, id: 'fleet_list') do%>
+			  	  	    <%= render @fleet_list %>
+			  	  	  <% end %>
+			  	    <% end %>
+			        </div>
+    			</div><!--/.well -->
+    		</div><!--/span-->
+    
+    <div>
       <%= yield %>
     </div>
-  </div>
+</div>
+</div>
+</div>
+
 </body>
 </html>
