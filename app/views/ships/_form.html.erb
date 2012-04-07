@@ -10,73 +10,112 @@
       </ul>
     </div>
   <% end %>
-
+<div class="span3" id="ship_entry_fields">
   <div class="field">
-    <%= f.label :name %><br />
+    <%= f.label :name %>
     <%= f.text_field :name %>
   </div>
   <div class="field">
-    <%= f.label :cost %><br />
+    <%= f.label :cost %>
     <%= f.number_field :cost %>
   </div>
   <div class="field">
-    <%= f.label :image_url %><br />
+    <%= f.label :image_url %>
     <%= f.text_field :image_url %>
   </div>
   <div class="field">
-    <%= f.label :empire_image, "Empire" %><br />
+    <%= f.label :empire_image, "Empire" %>
     <%= f.select :empire_image, Ship::EMPIRES, prompt: 'Select an Empire' %>
   </div>
   <div class="field">
-    <%= f.label :craft %><br />
+    <%= f.label :craft %>
     <%= f.select :craft, Ship::CRAFT, Prompt: 'Select Shuttles' %>
   </div>
   <div class="field">
-    <%= f.label :turn %><br />
+    <%= f.label :turn %>
     <%= f.number_field :turn %>
   </div>
   <div class="field">
-    <%= f.label :shield %><br />
+    <%= f.label :shield %>
     <%= f.number_field :shield %>
   </div>
   <div class="field">
-    <%= f.label :damage %><br />
+    <%= f.label :damage %>
     <%= f.number_field :damage %>
   </div>
   <div class="field">
-    <%= f.label :marines %><br />
+    <%= f.label :marines %>
     <%= f.number_field :marines %>
   </div>
   <div class="field">
-    <%= f.label :cripple_value %><br />
+    <%= f.label :cripple_value %>
     <%= f.number_field :cripple_value %>
   </div>
-<div><b>Traits:</b></div>
-  <div class="traits">
-  	<%= f.label :agile, "Agile:" %>
-    <%= f.check_box(:agile)%>
-    <%= f.label :armoured, "Armoured:" %>
-    <%= f.check_box(:armoured)%>
-    <%= f.label :cloak, "Cloak:" %>
-    <%= f.check_box(:cloak)%>
-    <%= f.label :enhanced_bridge, "Enhanced Bridge:" %>
-    <%= f.check_box(:enhanced_bridge)%>
-    <%= f.label :fast, "Fast:" %>
-    <%= f.check_box(:fast)%>
-    <%= f.label :immobile, "Immobile:" %>
-    <%= f.check_box(:immobile)%>
-    <%= f.label :lumbering, "Lumbering:" %>
-    <%= f.check_box(:lumbering)%>
-    <%= f.label :no_probes, "No Probes:" %>
-    <%= f.check_box(:no_probes)%>
-    <%= f.label :quick_launch, "Quick Launch:" %>
-    <%= f.check_box(:quick_launch)%>
-    <%= f.label :scout, "Scout:" %>
-    <%= f.check_box(:scout)%>
-    <%= f.label :slow, "Slow" %>
-    <%= f.check_box(:slow)%>
+</div>
+
+  <div class="span6 traits">
+	<b>Traits:</b>
+	<table class="table">
+  		<tr>	
+			<td>
+					<%= f.label :agile, "Agile:" %>
+					<%= f.check_box(:agile)%>
+			</td>
+		    <td>
+					<%= f.label :armoured, "Armoured:" %>
+		    		<%= f.check_box(:armoured)%>
+			</td>
+		    <td>
+					<%= f.label :cloak, "Cloak:" %>
+		    		<%= f.check_box(:cloak)%>
+			</td>
+		    <td>
+					<%= f.label :enhanced_bridge, "Enhanced Bridge:" %>
+		    		<%= f.check_box(:enhanced_bridge)%>
+			</td>
+		</tr>
+		<tr>	 	
+			<td>
+				    <%= f.label :fast, "Fast:" %>
+				    <%= f.check_box(:fast)%>
+			</td>  
+		    <td>
+				 	<%= f.label :immobile, "Immobile:" %>
+		    	    <%= f.check_box(:immobile)%>
+			</td>   
+		    <td>
+				    <%= f.label :lumbering, "Lumbering:" %>
+		    	    <%= f.check_box(:lumbering)%>
+			</td>   
+		    <td>    
+				    <%= f.label :no_probes, "No Probes:" %>
+		    	    <%= f.check_box(:no_probes)%>
+			</td>   
+		</tr>
+		<tr>	   
+			<td>
+				   <%= f.label :quick_launch, "Quick Launch:" %>
+				   <%= f.check_box(:quick_launch)%>
+			</td>  
+		    <td>   
+				   <%= f.label :scout, "Scout:" %>
+		    	   <%= f.check_box(:scout)%>
+			</td>  
+		    <td>
+				   <%= f.label :slow, "Slow" %>
+		    	   <%= f.check_box(:slow)%>
+			</td>
+		</tr> 
+		
+		
+		
+		
+		
+		
+		
+	</table>
   </div>
-  <div class="traits">
+  <div class="span6 offset1 traits">
     <%= f.label :anti_drone, "Anti-Drone:" %>
     <%= f.select :anti_drone, Ship::TRAIT_NUMBERS, Prompt: 'Select Trait Value' %>
     <%= f.label :command, "Command:" %>
@@ -90,8 +129,10 @@
     <%= f.label :transporter, "Transporters:" %>
     <%= f.select :transporter, Ship::TRAIT_NUMBERS, Prompt: 'Select Trait Value' %>
   </div>
-  <div class="actions">
+</div> 
+</div>
+  <div class="span3 offset1 actions">
     <%= f.submit %>
   </div>
-  
+
 <% end %>

@@ -135,8 +135,128 @@
 		<% end %>
 	</table>
 </div>
+<div class="span10 offset2" id="crits_table">
+	<table class="table table-bordered table-striped">
+		<h3>Critical Location</h3>
+		<tr>
+			<td class="row_header">
+				Impulse Drive
+				<p>
+					<table class="table table-bordered checkboxes">
+						<tr>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						</tr>
+					</table>
+				</p>
+			</td>
+			<td>Max. Speed 10</td>
+			<td>Max. Speed 8</td>
+			<td>Escalate, Crew Critical Score +1</td>
+			<td>Ship Adrift</td>
+			<td>Dilithium Critical Score +1</td>
+			<td>Damage Control rolls at -1</td>
+		</tr>
+		<tr>
+			<td class="row_header">
+				Dilithium Chamber
+				<p>
+						<table class="table table-bordered checkboxes">
+							<tr>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							</tr>
+						</table>
+				</p>
+			</td>
+			<td>Max. Speed 10. Lose 5 shields</td>
+			<td>Lose one random Trait, Lose 5 shields, Escalate</td>
+			<td>Shields to 0</td>
+			<td>Max. Speed 4, lose one random trait, -1 Marines</td>
+			<td>Ship Adrift, CQ 9 every End Phase or EXPLODE</td>
+			<td>Ship Explodes</td>
+		</tr>
+		<tr>
+			<td class="row_header">
+				Weapons
+				<p>
+						<table class="table table-bordered checkboxes">
+							<tr>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							</tr>
+						</table>
+				</p>
+			</td>
+			<td>All weapon systems to -1 to hit</td>
+			<td>One random weapon system cannot fire</td>
+			<td>Must roll 4+ before firing each weapon system, Escalate</td>
+			<td>CQ 9 every end phase, or Dilithium Critical Score +1</td>
+			<td>ALL weapons -1 AD</td>
+			<td>No weapons may fire</td>
+		</tr>
+		<tr>
+			<td class="row_header">
+				Crew
+				<p>
+						<table class="table table-bordered checkboxes">
+							<tr>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							</tr>
+						</table>
+				</p>
+			</td>
+			<td>-1 Marines</td>
+			<td>-2 Marines, escalate</td>
+			<td>All CQ checks at -1</td>
+			<td>No Special Actions, -2 Marines</td>
+			<td>Must roll 4+ before firing each weapon system</td>
+			<td>-3 Marines, no Damage Control, no Special Actions, lose one random trait</td>
+		</tr>
+		<tr>
+			<td class="row_header">
+				Shields
+				<p>
+						<table class="table table-bordered checkboxes">
+							<tr>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							</tr>
+						</table>
+				</p>
+			</td>
+			<td>Lose 5 shields</td>
+			<td>Lose 5 shields, CQ 9 every end phase, or Dilithium Critical Score +1</td>
+			<td>Lose 5 shields, Escalate</td>
+			<td>Each attacking weapon system ignores shields on a 4+</td>
+			<td>Shields to 0</td>
+			<td>Shields to 0</td>
+		</tr>
+	</table>
+</div>
 
-<div class="span6 OFFSET3">
+<div class="span6 offset2">
 <p><a class="btn" href=<%= new_weapon_card_path(:ship_id => @ship.id) %>>Add a weapon</a>
 <a class="btn" href=<%= edit_ship_path(@ship) %>>Edit this ship</a>
 <a class="btn" href=<%= ships_path %>>Go back to the list</a></p>

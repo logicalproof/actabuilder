@@ -1,9 +1,9 @@
-<div class="fleet_list_title">Your Fleet List</div>
-<table>
+
+<table class="table table-striped table-condensed">
   <%= render(fleet_list.assigned_ships) %>
   <tr class="total_line">
   	<td colspan="2">Total</td>
-  	<td class="total_cell"><%= fleet_list.total_cost %></td>
+  	<td class="total_cell"> <%= fleet_list.total_cost %></td>
   </tr>	
 </table>	
 

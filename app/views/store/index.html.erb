@@ -3,15 +3,11 @@
 	<%= notice %>
   </p>
 <% end %>
-<div class="span10">
+<div class="span7">
 	<h1>A Call To Arms: Starfleet</h1>
 	<h2>Fleet Builder Catalog</h2>
-<div>
-	
-
-
 	<% @ships.each do |ship| %>
-	<div class="span10" id="fleet_index">
+	<div class="span6" id="fleet_index">
 		<div class="span4">	
 		    <div><%= image_tag(ship.empire_image) %>
 			<h3><%= ship.name %></h3>
@@ -19,9 +15,20 @@
 			</div>
 		</div>
 		<%= image_tag(ship.image_url)%>
-    	Cost: <%= ship.cost %>
-    	<%= button_to 'Add to Fleet', assigned_ships_path(ship_id: ship), remote: true%>
-     </div>
-     <% end %>
+	   <p>Cost: <b><%= ship.cost %></b></p>
+	   	<%= button_to 'Add to Fleet', assigned_ships_path(ship_id: ship), remote: true%>
+	    </div>
+	    <% end %>
+</div>
 
+	<div class="well span2" id="fleet_list">
+		<ul class="nav nav-list">
+			<li class="nav-header">fleet List</li>
+		</ul>
+		<% if @fleet_list %>
+	 	  <%= hidden_div_if(@fleet_list.assigned_ships.empty?, id: 'fleet_list') do%>
+		  <%= render @fleet_list %>
+	 	  <% end %>
+	   <% end %>
+	</div>
 

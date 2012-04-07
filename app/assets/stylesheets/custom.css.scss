@@ -41,6 +41,42 @@
 	}
 }
 
+div#crits_table {
+	h3 {
+		margin-bottom: 10px;
+	}
+	table {
+	
+		.row_header {
+			font-size: medium;
+			font-weight: bold;
+			white-space: nowrap;
+		}
+		tr {
+			table-layout: fixed;
+			height: 100px;
+			td {
+				table-layout: fixed;
+				width: 10%;
+				font-size: xx-small;
+				font-weight: bold;
+				.checkboxes, tr {
+					table-layout: fixed;
+					height: 5px;
+					background-color: #c2c3bf;
+					border-color: #0886d3;
+					td {
+						background-color: #c2c3bf;
+						font-size: xx-small;
+						font-weight: normal;
+						text-align: left;
+					}
+				}
+			}
+		}
+	}
+}
+
 /*Fleet Index Listing*/
 #fleet_index {
 	display: inline;
@@ -50,3 +86,16 @@
 		width: 90px;
 	}
 }
+div#fleet_list {
+	font-size: x-small;
+}
+
+/*Ship data form*/
+div#ship_entry_fields {
+	div#fields {
+		display: inline;
+	}
+}
+
+
+
