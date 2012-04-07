@@ -1,22 +1,26 @@
 @import 'bootstrap';
-
+.hidden {
+	display: none;
+}
 .logo {
 	height: 100px;
 	width: 500px;
 	float: left;
 
 }
+
 .list_image_empire {
 	height: 120px;
 	width: 120px;
 	float: left;
 }
 .list_image_ship {
-	height: 60px;
-	width: 60px;
+	height: 120px;
+	width: 120px;
 	float: inherit;
 	border: 1px solid;
 }
+
 #name_plate {
 	position: relative;
 	height: 150px;
@@ -38,6 +42,12 @@
 		border: 1px solid;
 		margin-top: 30px;
 		margin-right: 30px;
+		.list_image_ship {
+			height: 60px;
+			width: 60px;
+			float: inherit;
+			border: 1px solid;
+		}
 	}
 }
 
@@ -96,6 +106,8 @@ div#ship_entry_fields {
 		display: inline;
 	}
 }
-
+table#fleet_list {
+	margin-top: 20px;
+}
 
 

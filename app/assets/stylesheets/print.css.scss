@@ -1,0 +1,40 @@
+/* remove and hidden class tags are used to hide and 
+add elements for printing*/
+.remove {
+	display: none;
+}
+.hidden {
+	display: inline;
+	.line {
+		position: relative;
+		left: 40px;
+		bottom : 10px;
+		border-bottom: 1px solid black;
+		width: 200px;
+	}
+}
+.table {
+	border: none;
+	font-family: serif;
+	.checkboxes {
+		border: 2px solid;
+	}
+}
+table#damage_track {
+	table-layout: fixed;
+	border: 2px solid black;
+	width: 100%;
+	#crit {
+		border-color: red, red, red, red;
+	}
+}
+table#shields_track {
+		table-layout: fixed;
+		border: 2px solid blue;
+		width: 100%;
+
+}
+.offset2 {
+	position: relative;
+	left: -90px;
+}

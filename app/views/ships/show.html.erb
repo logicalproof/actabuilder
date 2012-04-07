@@ -4,17 +4,22 @@
   </p>
 <% end %>
 <div class="span10">
-	<div class="well" id="name_plate">
+	<div class="well remove" id="name_plate">
 		<div id="plate_1">
 	    	<%= image_tag(@ship.empire_image, class: 'list_image_empire') %>
 	    	<h2><%= @ship.name %></h2>
 	    	<p> <%= @ship.cost %> points</p>
 			
 		</div>
-	    <div id="plate_2"> 
+	    <div class="remove" id="plate_2"> 
 			<%= image_tag(@ship.image_url, class: 'image_ship')%>
 		</div>
 	</div>
+</div>
+<div class="span9 offset2 hidden">
+	<h2><%= @ship.name %></h2>
+	<p> <%= @ship.cost %> points</p>
+	<p id="name">Name:<div class="line"></div></p>
 </div>
 
 <div class="span2 offset2">
@@ -255,8 +260,35 @@
 		</tr>
 	</table>
 </div>
-
-<div class="span6 offset2">
+<div class="span10 offset2 hidden">
+	<table class="table table-bordered table-striped" id="damage_track">	
+		<h4>Damage</h4>
+		<tr>
+			<% (@ship.damage).downto(1) do |x| %>
+			  <% if x == @ship.cripple_value %>
+			    <td id="crit">C</td>
+			  <% else %>
+				<td><%= x %></td>
+			  <% end %>
+			<% end %>
+		</tr>
+	</table>
+</div>
+<div class="span10 offset2 hidden">
+	<table class="table table-bordered table-striped" id="shields_track">	
+		<h4>Shields</h4>
+		<tr>
+			<% 1.upto(@ship.shield + ((@ship.shield/10)*6)) do |x| %>
+			  <% if x > @ship.shield %>
+			    <td class="boosted_shield">B</td>
+			  <% else %>
+				<td class="normal_shield"><%= x %></td>
+			  <% end %>
+			<% end %>
+		</tr>
+	</table>
+</div>
+<div class="span6 offset2 remove">
 <p><a class="btn" href=<%= new_weapon_card_path(:ship_id => @ship.id) %>>Add a weapon</a>
 <a class="btn" href=<%= edit_ship_path(@ship) %>>Edit this ship</a>
 <a class="btn" href=<%= ships_path %>>Go back to the list</a></p>

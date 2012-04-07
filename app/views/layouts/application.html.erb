@@ -8,7 +8,7 @@
   <%= csrf_meta_tags %>
 </head>
 <body class='<%= controller.controller_name %>'>
-	<div class="navbar">
+	<div class="navbar remove">
 	    <div class="navbar-inner">
 	        <div class="container">
 	            <%= image_tag("ActaSF.png", class: "logo") %>
@@ -20,7 +20,7 @@
 	<div class="container">
     	<div class="row">
     		<div class="span2">
-    			<div class="well sidebar-nav">
+    			<div class="well sidebar-nav remove">
     				<ul class="nav nav-list">
 						<li class="nav-header">Sidebar</li>
 						<li><a href="http://localhost:3000">Home</a></li>
@@ -29,7 +29,7 @@
 					</ul>
     			</div><!--/.well -->
     		</div><!--/span-->
-		    <div>
+		    <div id="main_body_content">
 		      <%= yield %>
 		    </div>
 		</div>
