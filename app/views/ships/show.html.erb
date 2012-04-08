@@ -140,8 +140,8 @@
 		<% end %>
 	</table>
 </div>
-<div class="span10 offset2" id="crits_table">
-	<table class="table table-bordered table-striped">
+<div class="span10 offset2 hidden" id="crits_table">
+	<table class="table table-bordered table-striped" id="the_actual_crit_table">
 		<h3>Critical Location</h3>
 		<tr>
 			<td class="row_header">
@@ -261,20 +261,6 @@
 	</table>
 </div>
 <div class="span10 offset2 hidden">
-	<table class="table table-bordered table-striped" id="damage_track">	
-		<h4>Damage</h4>
-		<tr>
-			<% (@ship.damage).downto(1) do |x| %>
-			  <% if x == @ship.cripple_value %>
-			    <td id="crit">C</td>
-			  <% else %>
-				<td><%= x %></td>
-			  <% end %>
-			<% end %>
-		</tr>
-	</table>
-</div>
-<div class="span10 offset2 hidden">
 	<table class="table table-bordered table-striped" id="shields_track">	
 		<h4>Shields</h4>
 		<tr>
@@ -284,7 +270,29 @@
 			  <% else %>
 				<td class="normal_shield"><%= x %></td>
 			  <% end %>
+			  <% if x == ((@ship.shield + ((@ship.shield/10)*6))/2) %>
+			    <tr>
+			  <% end %>
 			<% end %>
+			</tr>
+		</tr>
+	</table>
+</div>
+<div class="span10 offset2 hidden">
+	<table class="table table-bordered table-striped" id="damage_track">	
+		<h4>Damage</h4>
+		<tr>
+			<% (@ship.damage).downto(1) do |x| %>
+			  <% if x == @ship.cripple_value %>
+			    <td id="crit">C</td>
+			  <% else %>
+				<td><%= x %></td>
+			  <% end %>
+			  <% if x == (@ship.damage/2) %>
+			    <tr>
+			  <% end %>
+			<% end %>
+			</tr>
 		</tr>
 	</table>
 </div>

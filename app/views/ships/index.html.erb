@@ -17,12 +17,14 @@
       <td>
       	<%= image_tag(ship.image_url, class: 'list_image_ship') %>
       </td>
-      <td class="list_actions">
-    	<%= link_to 'Show', ship %><br />
-    	<%= link_to 'Edit', edit_ship_path(ship)%><br />
-    	<%= link_to 'Destroy', ship, confirm: 'Are you sure?', method: :delete %>
-      </td>
     </tr>
+	<tr>
+		<td class="list_actions">
+		<div><%= button_to 'View', ship, method: :get %></div>
+	   	<div><%= button_to 'Change Stats', edit_ship_path(ship), method: :get%></div>
+	    <div><%= button_to 'Destroy', ship, confirm: 'Are you sure?', method: :delete %></div>  
+	    </td>
+	</tr>
   <% end %>
 </table>
 

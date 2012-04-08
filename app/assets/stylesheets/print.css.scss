@@ -13,8 +13,8 @@ add elements for printing*/
 		width: 200px;
 	}
 }
-.table {
-	border: none;
+#the_actual_crit_table {
+	border: 2px solid black;
 	font-family: serif;
 	.checkboxes {
 		border: 2px solid;
@@ -24,8 +24,10 @@ table#damage_track {
 	table-layout: fixed;
 	border: 2px solid black;
 	width: 100%;
-	#crit {
-		border-color: red, red, red, red;
+	font-weight: bold;
+	td {
+		text-align: center;
+		background-color: grey;
 	}
 }
 table#shields_track {
