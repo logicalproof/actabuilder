@@ -83,4 +83,22 @@ class AssignedShipsController < ApplicationController
       format.json { head :no_content }
     end
   end
+  
+  # POST /assigned_ships
+  # POST /assigned_ships.json
+  def decrement
+    @fleet_list = current_fleet_list
+    @assigned_ship = @fleet_list.decrement_assigned_ship_quantity(params[:id])
+    
+    respond_to do |format|
+      if @assigned_ship.save
+        format.html { redirect_to store_path, notice: "Ship was succesfully removed" }
+        format.js { @current_assigned_ship = @assigned_ship }
+        format.json { head :no_content }
+      else
+        format.html { render action: "edit" }
+        format.json { render json: @assigned_ship.errors, status: :unprocessable_entity }
+      end
+    end
+  end
 end

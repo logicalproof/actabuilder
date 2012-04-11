@@ -13,22 +13,20 @@
 	        <div class="container">
 	            <%= image_tag("ActaSF.png", class: "logo") %>
 	            <%= @page_title || "Fleet Builder"%>
+    				<div class="nav-collapse">
+						<ul class="nav">
+							<li><a href="http://localhost:3000">Home</a></li>
+				      		<li><a href="http://localhost:3000/ships">Ship List</a></li>
+				        	<li><a href="http://localhost:3000/weapons">Weapons List</a></li>
+						</ul>
+					</div>
+    			</div>
 	        </div>
 	    </div>
 	</div>    
 	
 	<div class="container">
     	<div class="row">
-    		<div class="span2">
-    			<div class="well sidebar-nav remove">
-    				<ul class="nav nav-list">
-						<li class="nav-header">Sidebar</li>
-						<li><a href="http://localhost:3000">Home</a></li>
-				      	<li><a href="http://localhost:3000/ships">Ship List</a></li>
-				        <li><a href="http://localhost:3000/weapons">Weapons List</a></li>
-					</ul>
-    			</div><!--/.well -->
-    		</div><!--/span-->
 		    <div id="main_body_content">
 		      <%= yield %>
 		    </div>

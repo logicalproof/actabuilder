@@ -4,8 +4,8 @@
   </p>
 <% end %>
 <div class="span6">
-	<h1>A Call To Arms: Starfleet</h1>
-	<h2>Fleet Builder Catalog</h2>
+	<h1 id="header">A Call To Arms: Starfleet</h1>
+	<h2 id="subheader">Fleet Builder Catalog</h2>
 	<% @ships.each do |ship| %>
 	<div class="span6" id="fleet_index">
 		<div class="span4">	
@@ -16,12 +16,12 @@
 		</div>
 		<%= image_tag(ship.image_url)%>
 	   <p>Cost: <b><%= ship.cost %></b></p>
-	   	<%= button_to 'Add to Fleet', assigned_ships_path(ship_id: ship), remote: true%>
+	   	<%= button_to 'Add to Fleet', assigned_ships_path(ship_id: ship), remote: true, :class => "btn btn-info"%>
 	    </div>
 	    <% end %>
 </div>
 
-	<div class="span3 offset1" id="fleet_list">
+	<div class="span5 offset1" id="fleet_list">
 		<% if @fleet_list %>
 	 	  <%= hidden_div_if(@fleet_list.assigned_ships.empty?, id: 'fleet_list') do%>
 		  <%= render @fleet_list %>

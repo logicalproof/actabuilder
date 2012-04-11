@@ -1,11 +1,11 @@
 <div class="span7">
 <h1>Ship List</h1>
 
-<table>
+<table id="ship_list_table">
   <% @ships.each do |ship| %>
-	<tr class="<%= cycle('list_line_odd', 'list_line_even') %>">
+	<tr class="top_line">
       <td>
-        <%= image_tag(ship.empire_image, class: 'list_image_empire') %>
+        <%= image_tag(ship.empire_image, class: 'list_empire') %>
       </td>  
       <td class="list_name">
     	<dl>
@@ -14,20 +14,17 @@
     		<dd>Cost: <b><%= ship.cost %></b></dd>
     	</dl>
       </td>
-      <td>
-      	<%= image_tag(ship.image_url, class: 'list_image_ship') %>
+      <td id="ship_list_image">
+      	<%= image_tag(ship.image_url, class: 'list_ship') %>
       </td>
     </tr>
-	<tr>
-		<td class="list_actions">
-		<div><%= button_to 'View', ship, method: :get %></div>
-	   	<div><%= button_to 'Change Stats', edit_ship_path(ship), method: :get%></div>
-	    <div><%= button_to 'Destroy', ship, confirm: 'Are you sure?', method: :delete %></div>  
-	    </td>
+	<tr class="action_list">
+		<td><%= button_to 'View', ship, method: :get, :class => "btn" %></td>
+   		<td><%= button_to 'Change Stats', edit_ship_path(ship), method: :get, :class => "btn" %></td>
+  		<td><%= button_to 'Destroy', ship, confirm: 'Are you sure?', method: :delete, :class => "btn" %></td>  
+		<% end %>
 	</tr>
-  <% end %>
 </table>
-
 
 </div>
 <div class="span2">

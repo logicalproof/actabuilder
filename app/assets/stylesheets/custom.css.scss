@@ -89,18 +89,34 @@ div#crits_table {
 		}
 	}
 }
-.list_actions div{
-	display: inline-block;
-	width: auto;
-	height: 30px;
+#ship_list_table tr td {
+	float:left;
+}
+.list_empire {
+	height: 50px;
+	width: 50px;
+}
+.list_ship {
+	height: 90px;
+	width: 90px;
+	float: none;
+}
+.action_list {
+	display: inline;
+}
+.top_line {
+	border-top: 1px solid lightgrey;
 }
 /*Fleet Index Listing*/
+#header, #subheader {
+	padding-left: 30px;
+}
 #fleet_index {
 	display: inline;
 	border-top: 2px dashed blue;
 	img {
-		height: 90px;
-		width: 90px;
+		height: 70px;
+		width: 70px;
 	}
 }
 div#fleet_list {

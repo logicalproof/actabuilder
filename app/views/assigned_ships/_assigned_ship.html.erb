@@ -1,9 +1,11 @@
 <% if assigned_ship == @current_assigned_ship%>
-<tr id="current_assigned_ship">
-	<% else %>	
-<tr>
-	<% end %>
+  <tr id="current_assigned_ship">
+<% else %>	
+  <tr>
+<% end %>
   	<td><%= assigned_ship.quantity %>&times;</td>
   	<td><%= assigned_ship.ship.name%></td>
   	<td class="ship_cost"><%= assigned_ship.total_cost%></td>
+	<td><%= link_to 'View', "/ships/#{assigned_ship.ship.id}", method: :get, :class => "btn btn-info" %></td>
+	<td><%= link_to 'Remove', decrement_assigned_ship_path(assigned_ship), method: :post, remote: true, :class => "btn btn-danger" %></td>
  </tr>

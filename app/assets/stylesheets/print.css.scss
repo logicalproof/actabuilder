@@ -14,7 +14,8 @@ add elements for printing*/
 	}
 }
 #the_actual_crit_table {
-	border: 2px solid black;
+	table-layout: fixed;
+	width: 100%;
 	font-family: serif;
 	.checkboxes {
 		border: 2px solid;
@@ -39,4 +40,7 @@ table#shields_track {
 .offset2 {
 	position: relative;
 	left: -90px;
+}
+body {
+	padding-top: 0px;
 }
