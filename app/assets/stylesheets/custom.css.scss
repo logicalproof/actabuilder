@@ -119,10 +119,20 @@ div#crits_table {
 		width: 70px;
 	}
 }
-div#fleet_list {
+div#fleet_right_container {
 	font-size: x-small;
-}
+	float: right;
+	position: relative;
+	width: 360px;
 
+
+	div#fleet_list{
+		position: fixed;
+		margin-bottom: 10px;
+		height: 100%;
+		top: 120px;
+	}
+}
 /*Ship data form*/
 div#ship_entry_fields {
 	div#fields {

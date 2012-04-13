@@ -1,6 +1,6 @@
 class Ship < ActiveRecord::Base
   has_many :assigned_ships
-  has_many :weapon_cards
+  has_many :weapon_cards, :dependent => :destroy
   validates :cost, numericality: {greater_than: 0}
   validates :name, :empire_image, :cost, presence: true
   validates_uniqueness_of :name, :scope => :empire_image

@@ -20,12 +20,14 @@
 	    </div>
 	    <% end %>
 </div>
+  <div id="fleet_right_container">
+<div class="span5" id="fleet_list">
 
-	<div class="span5 offset1" id="fleet_list">
-		<% if @fleet_list %>
-	 	  <%= hidden_div_if(@fleet_list.assigned_ships.empty?, id: 'fleet_list') do%>
-		  <%= render @fleet_list %>
-	 	  <% end %>
-	   <% end %>
-	</div>
+    <% if @fleet_list %>
+	<%= hidden_div_if(@fleet_list.assigned_ships.empty?, id: 'fleet_list') do%>
+      <%= render @fleet_list %>
+	<% end %>
+  <% end %>
+  </div>
+</div>
 

@@ -2,8 +2,11 @@ class ShipsController < ApplicationController
   # GET /ships
   # GET /ships.json
   def index
-    @ships = Ship.all
-
+    ships = Ship.all
+    #sorts the ship list by empire and name (remember #sort_by sorts 
+    #from left to right so you can have multiple criteria)
+    @ships = ships.sort_by { |v| [v[:empire_image], v[:cost]] }
+    
     respond_to do |format|
       format.html # index.html.erb
       format.json { render json: @ships }
