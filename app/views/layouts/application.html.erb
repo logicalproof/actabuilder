@@ -15,10 +15,11 @@
 	            <%= @page_title || "Fleet Builder"%>
     				<div class="nav-collapse">
 						<ul class="nav">
-							<li><a href="<%= root_path %>">Home</a></li>
-							<li><a href="#">Sign in</a></li>
-				      		<li><a href="<%= ships_path %>">Ship List</a></li>
-				        	<li><a href="<%= weapons_path %>">Weapons List</a></li>
+							<li><%=link_to "Home", root_path %>"></li>
+							<li><%= link_to "Sign in", "#" %></li>
+							<li><%= link_to "Fleet Builder", store_index_path %></li>
+				      		<li><%= link_to "Ship List", ships_path %></li>
+				        	<li><%= link_to "Weapon List", weapons_path %></li>
 						</ul>
 					</div>
     			</div>
