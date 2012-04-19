@@ -10,24 +10,23 @@
 	<div class="span6" id="fleet_index">
 		<div class="span4">	
 		    <div><%= image_tag(ship.empire_image) %>
-			<h3><%= ship.name %></h3>
-			 <%= Ship::EMPIRES.key(ship.empire_image) %>
+			     <h3><%= ship.name %></h3>
+			     <%= Ship::EMPIRES.key(ship.empire_image) %>
 			</div>
 		</div>
 		<%= image_tag(ship.image_url)%>
-	   <p>Cost: <b><%= ship.cost %></b></p>
+	    <p>Cost: <b><%= ship.cost %></b></p>
 	   	<%= button_to 'Add to Fleet', assigned_ships_path(ship_id: ship), remote: true, :class => "btn btn-info"%>
-	    </div>
-	    <% end %>
-</div>
-  <div id="fleet_right_container">
-<div class="span5" id="fleet_list">
-
-    <% if @fleet_list %>
-	<%= hidden_div_if(@fleet_list.assigned_ships.empty?, id: 'fleet_list') do%>
-      <%= render @fleet_list %>
+	</div>
 	<% end %>
-  <% end %>
-  </div>
+</div>
+<div id="fleet_right_container">
+    <div class="span5" id="fleet_list">
+    	<% if @fleet_list %>
+		  <%= hidden_div_if(@fleet_list.assigned_ships.empty?, id: 'fleet_list') do%>
+	        <%= render @fleet_list %>
+		  <% end %>
+	    <% end %>
+    </div>
 </div>
 

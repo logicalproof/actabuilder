@@ -123,7 +123,7 @@ div#fleet_right_container {
 	font-size: x-small;
 	float: right;
 	position: relative;
-	width: 360px;
+	width: 420px;
 
 
 	div#fleet_list{
@@ -141,6 +141,16 @@ div#ship_entry_fields {
 }
 table#fleet_list {
 	margin-top: 20px;
+}
+
+/* forms */
+
+input, textarea, select, .uneditable-input {
+  border: 1px solid #bbb;
+  width: 100%;
+  padding: 10px;
+  height: auto;
+  margin-bottom: 15px;
 }
 
 
