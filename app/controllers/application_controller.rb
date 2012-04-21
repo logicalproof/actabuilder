@@ -1,5 +1,6 @@
 class ApplicationController < ActionController::Base
   protect_from_forgery
+  include SessionsHelper
   
     def current_fleet_list
       FleetList.find(session[:fleet_list_id])

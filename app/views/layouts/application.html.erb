@@ -15,11 +15,25 @@
 	            <%= @page_title || "Fleet Builder"%>
     				<div class="nav-collapse">
 						<ul class="nav">
-							<li><%=link_to "Home", root_path %></li>
-							<li><%= link_to "Sign in", "#" %></li>
+							<li><%= link_to "Home", root_path %></li>
+						  <% unless signed_in? %>
+							<li><%= link_to "Sign in", signin_path %></li>
+						  <% else %>
 							<li><%= link_to "Fleet Builder", store_index_path %></li>
-				      		<li><%= link_to "Ship List", ships_path %></li>
-				        	<li><%= link_to "Weapon List", weapons_path %></li>
+							<li id="fat-menu" class="dropdown">
+							              <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+							                Account <b class="caret"></b>
+							              </a>
+							
+							<ul class="dropdown-menu">
+					      		<li><%= link_to "Ship List", ships_path %></li>
+					        	<li><%= link_to "Weapon List", weapons_path %></li>
+								<li class="divider"></li>
+								<li><%= link_to "Profile", current_user %></li>
+								<li><%= link_to "Sign out", signout_path, method: "delete" %></li>
+							</ul>
+							</li>
+						  <% end %>
 						</ul>
 					</div>
     			</div>
@@ -30,6 +44,9 @@
 	<div class="container">
     	<div class="row">
 		    <div id="main_body_content">
+			  <% flash.each do |key, value| %>
+		        <div class="alert alert-<%= key %>"><%= value %></div>
+			  <% end %>
 		      <%= yield %>
 			  <div class="span10 offset1"></div>
 		    </div>
