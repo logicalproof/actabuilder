@@ -1,4 +1,6 @@
 class WeaponCardsController < ApplicationController
+  load_resource
+  authorize_resource
   # GET /weapon_cards
   # GET /weapon_cards.json
   def index

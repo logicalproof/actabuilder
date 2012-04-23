@@ -19,15 +19,19 @@
 						  <% unless signed_in? %>
 							<li><%= link_to "Sign in", signin_path %></li>
 						  <% else %>
-							<li><%= link_to "Fleet Builder", store_index_path %></li>
+							<% if can? :read, Ship %>
+								<li><%= link_to "Fleet Builder", store_index_path %></li>
+							<% end %>
 							<li id="fat-menu" class="dropdown">
 							              <a href="#" class="dropdown-toggle" data-toggle="dropdown">
 							                Account <b class="caret"></b>
 							              </a>
 							
 							<ul class="dropdown-menu">
-					      		<li><%= link_to "Ship List", ships_path %></li>
-					        	<li><%= link_to "Weapon List", weapons_path %></li>
+								<% if can? :create, Ship %>
+						      		<li><%= link_to "Ship List", ships_path %></li>
+						        	<li><%= link_to "Weapon List", weapons_path %></li>
+								<% end %>
 								<li class="divider"></li>
 								<li><%= link_to "Profile", current_user %></li>
 								<li><%= link_to "Sign out", signout_path, method: "delete" %></li>

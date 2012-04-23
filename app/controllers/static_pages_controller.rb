@@ -4,4 +4,7 @@ class StaticPagesController < ApplicationController
 
   def help
   end
+  
+  def unauthorized
+  end
 end

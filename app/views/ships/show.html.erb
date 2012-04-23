@@ -258,7 +258,9 @@
 </div>
 
 <div class="span6 remove">
-<p><a class="btn" href=<%= new_weapon_card_path(:ship_id => @ship.id) %>>Add a weapon</a>
-<a class="btn" href=<%= edit_ship_path(@ship) %>>Edit this ship</a>
-<a class="btn" href=<%= store_index_path %>>Go back to the list</a></p>
+	<% if can? :create, Ship %>
+	  <p><a class="btn" href=<%= new_weapon_card_path(:ship_id => @ship.id) %>>Add a weapon</a>
+	  <a class="btn" href=<%= edit_ship_path(@ship) %>>Edit this ship</a>
+	<% end %>
+	<a class="btn" href=<%= store_index_path %>>Go back to the list</a></p>
 </div>

@@ -1,4 +1,6 @@
 class FleetListsController < ApplicationController
+  load_resource
+  authorize_resource
   # GET /fleet_lists
   # GET /fleet_lists.json
   def index

@@ -4,6 +4,8 @@ gem 'rails', '3.2.2'
 gem 'bootstrap-sass', '= 2.0.0'
 gem 'thin'
 gem 'bcrypt-ruby', '3.0.1'
+gem "cancan", ">= 1.6.7"
+gem "rolify", ">= 3.1.0"
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'

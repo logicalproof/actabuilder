@@ -1,4 +1,6 @@
 class AssignedShipsController < ApplicationController
+  load_resource
+  authorize_resource
   # GET /assigned_ships
   # GET /assigned_ships.json
   def index
