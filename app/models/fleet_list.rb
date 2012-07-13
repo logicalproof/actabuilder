@@ -26,3 +26,12 @@ class FleetList < ActiveRecord::Base
     assigned_ships.to_a.sum { |item| item.total_cost }
   end
 end
+# == Schema Information
+#
+# Table name: fleet_lists
+#
+#  id         :integer         not null, primary key
+#  created_at :datetime        not null
+#  updated_at :datetime        not null
+#
+

@@ -2,7 +2,7 @@
 <html>
 <head>
   <title>A CALL TO ARMS STAR FLEET</title>
-  <%= stylesheet_link_tag "custom", :media => "all" %>
+  <%= stylesheet_link_tag "custom", "bootstrap", :media => "all" %>
   <%= stylesheet_link_tag 'print', :media => :print %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
@@ -12,7 +12,6 @@
 	    <div class="navbar-inner">
 	        <div class="container">
 	            <%= image_tag("ActaSF.png", class: "logo") %>
-	            <%= @page_title || "Fleet Builder"%>
     				<div class="nav-collapse">
 						<ul class="nav">
 							<li><%= link_to "Home", root_path %></li>
@@ -31,6 +30,7 @@
 								<% if can? :create, Ship %>
 						      		<li><%= link_to "Ship List", ships_path %></li>
 						        	<li><%= link_to "Weapon List", weapons_path %></li>
+						            <li><%= link_to "User List", users_path %></li>
 								<% end %>
 								<li class="divider"></li>
 								<li><%= link_to "Profile", current_user %></li>

@@ -11,9 +11,11 @@ class Ability
            can :manage, FleetList
            can :manage, AssignedShip
            can :manage, User, :id => user.id
+           cannot :index, User
            can :read, Ship
          else
            can :manage, User, :id => user.id
+           cannot :index, User
          end
     #
     # The first argument to `can` is the action you are giving the user permission to do.

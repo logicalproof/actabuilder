@@ -1,0 +1,27 @@
+<div class="span9 offset1">
+	<h1>Profiles</h1>
+
+<table class="table table-striped">
+
+    <% @users.each do |user| %>
+    <tr class="<%= cycle('list_line_odd', 'list_line_even') %>">
+  
+    <td class = "list_name">
+    	<dl>
+    		<dt><%= user.name %></dt>
+    		<dd>
+              <% if user.role? %>
+	            Role: <%= user.role.capitalize %>
+	          <% else %>
+	            Role: Unsubscribed
+	          <% end %>
+	        </dd>
+    	</dl>
+    </td>
+    <td class="list_actions">
+    	<%= link_to 'Show', user %><br />
+    	<%= link_to 'Edit', edit_user_path(user)%><br />
+  </tr>
+<% end %>
+</table>
+</div>

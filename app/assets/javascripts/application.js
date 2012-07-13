@@ -13,5 +13,7 @@
 //= require jquery
 //= require jquery-ui
 //= require jquery_ujs
+//= require jquery.pjax
 //= require bootstrap
 //= require_tree .
+

@@ -10,3 +10,15 @@ class Weapon < ActiveRecord::Base
     WEAPON[weap.name] = weap
   end
 end
+# == Schema Information
+#
+# Table name: weapons
+#
+#  id         :integer         not null, primary key
+#  name       :string(255)
+#  range      :integer
+#  special    :string(255)
+#  created_at :datetime        not null
+#  updated_at :datetime        not null
+#
+
