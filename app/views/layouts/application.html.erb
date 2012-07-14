@@ -12,6 +12,12 @@
 	    <div class="navbar-inner">
 	        <div class="container">
 	            <%= image_tag("ActaSF.png", class: "logo") %>
+			    <% if @ships %>	
+				    <%= will_paginate @ships, :renderer => BootstrapPagination::Rails %>
+				<% end %>
+				<% if @users %>	
+				    <%= will_paginate @users, :renderer => BootstrapPagination::Rails %>
+				<% end %>
     				<div class="nav-collapse">
 						<ul class="nav">
 							<li><%= link_to "Home", root_path %></li>
@@ -40,6 +46,7 @@
 						  <% end %>
 						</ul>
 					</div>
+					
     			</div>
 	        </div>
 	    </div>

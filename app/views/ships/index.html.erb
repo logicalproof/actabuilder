@@ -1,34 +1,25 @@
 <% if current_user.role == "subscriber" %>
 	<div class="well span12"><h1>You are not authorized to view this page.</p></div>
 <% else %>
-<div class="span7 offset1">
-<h1>Ship List</h1>
-
-<table id="ship_list_table">
-  <% @ships.each do |ship| %>
-	<tr class="top_line">
-      <td>
-        <%= image_tag(ship.empire_image, class: 'list_empire') %>
-      </td>  
-      <td class="list_name">
-    	<dl>
-    		<dt><%= ship.name %></dt>
-    		<dd><%= Ship::EMPIRES.key(ship.empire_image) %></dd>
-    		<dd>Cost: <b><%= ship.cost %></b></dd>
-    	</dl>
-      </td>
-      <td id="ship_list_image">
-      	<%= image_tag(ship.image_url, class: 'list_ship') %>
-      </td>
-    </tr>
-	<tr class="action_list">
-		<td><%= button_to 'View', ship, method: :get, :class => "btn" %></td>
-   		<td><%= button_to 'Change Stats', edit_ship_path(ship), method: :get, :class => "btn" %></td>
-  		<td><%= button_to 'Destroy', ship, confirm: 'Are you sure?', method: :delete, :class => "btn" %></td>
-		<% end %>
-	</tr>
-</table>
-
+<div class="span6">
+    <h1>Ship List</h1>
+  	<% @ships.each do |ship| %>
+	<div class="span6" id="ship_index">
+		<div class="span4">	
+		    <div><%= image_tag(ship.empire_image) %>
+			     <h3><%= ship.name %></h3>
+			     <%= Ship::EMPIRES.key(ship.empire_image) %>
+			</div>
+		</div>
+		<%= image_tag(ship.image_url)%>
+	    <p>Cost: <b><%= ship.cost %></b></p>
+        <div class="span6" id="ship_controls">
+		    <%= button_to 'View', ship, method: :get, :class => "btn" %>
+   		    <%= button_to 'Change Stats', edit_ship_path(ship), method: :get, :class => "btn" %>
+  		    <%= button_to 'Destroy', ship, confirm: 'Are you sure?', method: :delete, :class => "btn" %>
+        </div>
+	</div>
+	<% end %>
 </div>
 <div class="span2">
 <a class="btn btn-info" href=<%= new_ship_path %>>Add a new ship</a>	

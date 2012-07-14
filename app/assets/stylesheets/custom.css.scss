@@ -4,7 +4,7 @@
 	display: none;
 }
 body {
-    padding-top: 110px;
+    padding-top: 120px;
 }
 .logo {
 	height: 100px;
@@ -113,11 +113,28 @@ div#crits_table {
 	padding-left: 30px;
 }
 #fleet_index {
-	display: inline;
+//	display: inline;
 	border-top: 2px dashed blue;
 	img {
 		height: 70px;
 		width: 70px;
+	}
+
+}
+div#ship_index {
+//	display: inline;
+	border-top: 2px dashed red;
+	padding-top: 5px;
+	img {
+		height: 70px;
+		width: 70px;
+	}
+	div#ship_controls {
+		form {
+			display: inline-block;
+			div {
+			}
+		}
 	}
 }
 div#fleet_right_container {
