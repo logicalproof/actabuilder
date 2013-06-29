@@ -171,6 +171,18 @@ input, textarea, select, .uneditable-input {
   margin-bottom: 15px;
 }
 
+/*weapon_form*/
+#weapon_form {
+	position: absolute;
+}
+input, textarea, select, .uneditable-input {
+  border: 1px solid #bbb;
+  width: 100%;
+  padding: 10px;
+  height: auto;
+  margin-bottom: 15px;
+}
+
 /* lists other than ships */
 
 

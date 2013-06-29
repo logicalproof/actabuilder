@@ -1,0 +1,4 @@
+$(document).ready(function(){
+	$(".table tbody tr:last").after("<%= escape_javascript(render(:partial => 'weapon')) %>");
+});
+

@@ -5,6 +5,7 @@ class WeaponsController < ApplicationController
   # GET /weapons.json
   def index
     @weapons = Weapon.all
+    @weapon = Weapon.new
 
     respond_to do |format|
       format.html # index.html.erb
@@ -43,11 +44,13 @@ class WeaponsController < ApplicationController
   # POST /weapons.json
   def create
     @weapon = Weapon.new(params[:weapon])
-
+    @weapons = Weapon.all
     respond_to do |format|
       if @weapon.save
+        format.js
         format.html { redirect_to @weapon, notice: 'Weapon was successfully created.' }
         format.json { render json: @weapon, status: :created, location: @weapon }
+
       else
         format.html { render action: "new" }
         format.json { render json: @weapon.errors, status: :unprocessable_entity }

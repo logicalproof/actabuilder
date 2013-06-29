@@ -1,0 +1,439 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"ge",
+				"ground_speed"
+			],
+			[
+				"Ra",
+				"RadioactivePowerConverter"
+			],
+			[
+				"ra",
+				"radioactive"
+			],
+			[
+				"o",
+				"overall_quality"
+			],
+			[
+				"req",
+				"require_relative"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"contents": "# Place all the behaviors and hooks related to the matching controller here.\n# All this logic will automatically be available in application.js.\n# You can use CoffeeScript in this file: http://jashkenas.github.com/coffee-script/\n$(\"#add_weapon.a\").on(\"click\", function(){\n	$(\"#weapons_list\").removeClass('hidden')\n\n	});",
+			"file": "app/assets/javascripts/weapons.js.coffee",
+			"file_size": 229,
+			"file_write_time": 1372481496000000,
+			"settings":
+			{
+				"buffer_size": 319,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"contents": "<div class=\"span9 offset1\">\n	<h1>Weapon Inventory</h1>\n\n<table class=\"table table-striped\">\n  <tr id=\"weapons_list\">\n    <%= render \"listed_weapon\" %>\n  </tr>\n\n</table>\n\n<br />	\n\n<div id=\"add_weapon\">\n    <%= link_to 'New Weapon', new_weapon_path %>\n    <%= render 'weapon/form' %>\n</div>\n</div>",
+			"file": "app/views/weapons/index.html.erb",
+			"file_size": 245,
+			"file_write_time": 1372483512000000,
+			"settings":
+			{
+				"buffer_size": 295,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/views/weapons/_listed_weapon.html.erb",
+			"settings":
+			{
+				"buffer_size": 533,
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "Packages/Ruby/Ruby.sublime-build",
+	"command_palette":
+	{
+		"height": 341.0,
+		"selected_items":
+		[
+			[
+				"ins",
+				"Package Control: Install Package"
+			],
+			[
+				"ke",
+				"Preferences: Key Bindings - User"
+			],
+			[
+				"user",
+				"Preferences: Key Bindings - User"
+			],
+			[
+				"insta",
+				"Package Control: Install Package"
+			],
+			[
+				"ru",
+				"SublimeREPL: Ruby"
+			],
+			[
+				"rub",
+				"SublimeREPL: Ruby"
+			],
+			[
+				"re",
+				"SublimeREPL: Ruby"
+			],
+			[
+				"rep",
+				"SublimeREPL: Ruby"
+			],
+			[
+				"setting",
+				"Preferences: Settings - Default"
+			],
+			[
+				"ruby",
+				"SublimeREPL: Ruby"
+			],
+			[
+				"ruby ",
+				"SublimeREPL: Ruby"
+			],
+			[
+				"brow",
+				"Preferences: Browse Packages"
+			],
+			[
+				"packages",
+				"Preferences: Browse Packages"
+			],
+			[
+				"repl ru",
+				"SublimeREPL: Ruby"
+			],
+			[
+				"repl r",
+				"SublimeREPL: Ruby"
+			],
+			[
+				"ruby re",
+				"SublimeREPL: Ruby IRB (deprecated)"
+			],
+			[
+				"mini",
+				"View: Toggle Minimap"
+			],
+			[
+				"",
+				"Package Control: Install Package"
+			],
+			[
+				"in",
+				"Package Control: Install Package"
+			],
+			[
+				"snippet att",
+				"Snippet: attr_accessor .."
+			],
+			[
+				"Snippet: ",
+				"Snippet: attr_accessor .."
+			],
+			[
+				"inst",
+				"Package Control: Install Package"
+			],
+			[
+				"snippet do",
+				"Snippet: DOCTYPE HTML"
+			],
+			[
+				"snippet ht",
+				"Snippet: html"
+			],
+			[
+				"sn ht",
+				"Snippet: html"
+			],
+			[
+				"sni h",
+				"Snippet: html"
+			]
+		],
+		"width": 389.0
+	},
+	"console":
+	{
+		"height": 139.0
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/home/logical-proof/.config/sublime-text-2/Packages/User/Default (Linux).sublime-keymap",
+		"/home/logical-proof/Dropbox/Developer/actabuilder/app/views/weapons/index.html.erb",
+		"/home/logical-proof/Dropbox/Developer/Isolation/Items/Item.rb",
+		"/home/logical-proof/Dropbox/Developer/Isolation/Items/Resource.rb",
+		"/home/logical-proof/Dropbox/Developer/Isolation/Items/Components/DataStore.rb",
+		"/home/logical-proof/Dropbox/Developer/Isolation/Planet.rb",
+		"/home/logical-proof/Dropbox/Developer/Isolation/manifest.rb",
+		"/home/logical-proof/Dropbox/Developer/Isolation/Player.rb",
+		"/home/logical-proof/Dropbox/Developer/Isolation/Items/Constructs/GroundUnits/OreDrone.rb",
+		"/home/logical-proof/Dropbox/Developer/Isolation/Items/Constructs/GroundDrone.rb",
+		"/home/logical-proof/Dropbox/Developer/Isolation/Items/Constructs/Automaton.rb",
+		"/home/logical-proof/.config/sublime-text-2/Packages/User/Preferences.sublime-settings",
+		"/home/logical-proof/.config/sublime-text-2/Packages/Default/Preferences.sublime-settings",
+		"/home/logical-proof/Dropbox/Developer/Isolation/Items/Constructs/AirDrone.rb",
+		"/home/logical-proof/.config/sublime-text-2/Packages/User/Monokai.tmTheme",
+		"/home/logical-proof/.config/sublime-text-2/Packages/Text/Plain text.tmLanguage",
+		"/home/logical-proof/Dropbox/Developer/Isolation/ObjectDatabase.rb",
+		"/home/logical-proof/Dropbox/Developer/Isolation/Modules/GameObject.rb",
+		"/home/logical-proof/Dropbox/Developer/Isolation/Items/Ore.rb",
+		"/home/logical-proof/Dropbox/Developer/Isolation/Items/Radioactive.rb",
+		"/home/logical-proof/Dropbox/Developer/Isolation/Item.rb",
+		"/home/logical-proof/.config/sublime-text-2/Packages/SublimeREPL/config/Ruby/Main.sublime-menu",
+		"/home/logical-proof/.config/sublime-text-2/Packages/Ruby/Ruby.sublime-build",
+		"/home/logical-proof/.config/sublime-text-2/Packages/Terminal/Terminal.sublime-settings",
+		"/home/logical-proof/Dropbox/Developer/Isolation/GameObject.rb",
+		"/home/logical-proof/.config/sublime-text-2/Packages/User/Ruby.sublime-settings",
+		"/home/logical-proof/Dropbox/Developer/clientFACParser/faye-test_signals.rb",
+		"/home/logical-proof/Dropbox/Developer/clientFACParser/*f",
+		"/home/logical-proof/Dropbox/Developer/FACParser/app/views/layouts/application.html.erb",
+		"/home/logical-proof/Developer/worker/welome.html",
+		"/home/logical-proof/.profile",
+		"/home/logical-proof/.bash_profile",
+		"/home/logical-proof/nick.rb",
+		"/home/logical-proof/help",
+		"/home/logical-proof/.ICEauthority"
+	],
+	"find":
+	{
+		"height": 37.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"parts[0]",
+			"until",
+			"completion",
+			"heat_resistance",
+			" ",
+			"concentration",
+			"hardness",
+			"rand(1000)",
+			")\n"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "app/assets/javascripts/weapons.js.coffee",
+					"settings":
+					{
+						"buffer_size": 319,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								311,
+								311
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/CoffeeScript/CoffeeScript.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
+			]
+		},
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 1,
+					"file": "app/views/weapons/index.html.erb",
+					"settings":
+					{
+						"buffer_size": 295,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								295,
+								295
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML5/Syntaxes/HTML 5.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "app/views/weapons/_listed_weapon.html.erb",
+					"settings":
+					{
+						"buffer_size": 533,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								524,
+								524
+							]
+						],
+						"settings":
+						{
+							"auto_name": "",
+							"syntax": "Packages/Rails/HTML (Rails).tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 0.0
+	},
+	"input":
+	{
+		"height": 33.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			],
+			[
+				1,
+				0,
+				2,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			0.44481442252,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.exec":
+	{
+		"height": 90.0
+	},
+	"replace":
+	{
+		"height": 0.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+			[
+				"",
+				"Items/Resources/Crystal.rb"
+			],
+			[
+				"min",
+				"Items/Resources/Mineral.rb"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"show_minimap": false,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 204.0,
+	"status_bar_visible": true
+}

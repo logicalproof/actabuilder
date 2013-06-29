@@ -1,0 +1,16 @@
+<% @weapons.each do |weapon| %>
+    <tr class="<%= cycle('list_line_odd', 'list_line_even') %>">
+  
+    <td class = "list_name", id="weapon_<%= weapon.id %>">
+    	<dl>
+    		<dt><h2><%= weapon.name %></h2></dt>
+    		<dd>Range: <%= weapon.range %></dd>
+    		<dd><%= truncate(strip_tags(weapon.special), length: 80) %></dd>
+    	</dl>
+    </td>
+    <td class="list_actions">
+    	<%= link_to 'Show', weapon %>
+    	<%= link_to 'Edit', edit_weapon_path(weapon)%>
+    	<%= link_to 'Destroy', weapon, confirm: 'Are you sure?', method: :delete %>
+    </td>
+<% end %>

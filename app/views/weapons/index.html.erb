@@ -2,27 +2,17 @@
 	<h1>Weapon Inventory</h1>
 
 <table class="table table-striped">
-  <tr>
-    <% @weapons.each do |weapon| %>
-    <tr class="<%= cycle('list_line_odd', 'list_line_even') %>">
-  
-    <td class = "list_name">
-    	<dl>
-    		<dt><h2><%= weapon.name %></h2></dt>
-    		<dd>Range: <%= weapon.range %></dd>
-    		<dd><%= truncate(strip_tags(weapon.special), length: 80) %></dd>
-    	</dl>
-    </td>
-    <td class="list_actions">
-    	<%= link_to 'Show', weapon %>
-    	<%= link_to 'Edit', edit_weapon_path(weapon)%>
-    	<%= link_to 'Destroy', weapon, confirm: 'Are you sure?', method: :delete %>
-    </td>
+  <tr id="weapons_list">
+    <%= render "listed_weapons" %>
+    </tr>
   </tr>
-<% end %>
+
 </table>
 
 <br />	
 
-<%= link_to 'New Weapon', new_weapon_path %>
+<div>
+    <button type="button" id="add_weapon">New Weapon</button>
+    <div id="weapon_form", class="hidden"><%= render 'weapons/form' %></div>
+</div>
 </div>
