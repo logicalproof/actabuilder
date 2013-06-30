@@ -7,6 +7,7 @@ class ShipsController < ApplicationController
     # @ships = Ship.paginate(:page => params[:page], :per_page => 5)
     #sorts the ship list by empire and name (remember #sort_by sorts 
     #from left to right so you can have multiple criteria)
+    ships = Ship.all
     @ships = ships.sort_by { |v| [v[:empire_image], v[:cost]] }
     
     respond_to do |format|

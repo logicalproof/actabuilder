@@ -1,5 +1,5 @@
 source 'https://rubygems.org'
-ruby '1.9.3'
+#ruby '1.9.3'
 gem 'rails', '3.2.2'
 gem 'bootstrap-sass', '= 2.0.0'
 gem 'thin'
@@ -16,7 +16,8 @@ gem 'rack-pjax'
 
 group :development, :test do
   gem 'rspec-rails', '2.9.0'
-  gem 'sqlite3', '1.3.5'
+  # gem 'sqlite3', '1.3.5'
+  gem 'pg', '0.12.2'
 end
 
 group :production do

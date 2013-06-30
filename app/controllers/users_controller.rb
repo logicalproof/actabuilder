@@ -38,8 +38,9 @@ class UsersController < ApplicationController
   end
   
   def index
-    @users = User.paginate(:page => params[:page], :per_page => 10)
-    # @users = users.sort_by { |v| v[:name] }
+    # @users = User.paginate(:page => params[:page], :per_page => 10)
+    users = User.all
+    @users = users.sort_by { |v| v[:name] }
     respond_to do |format|
       format.html # index.html.erb
       format.json { render json: @users }
