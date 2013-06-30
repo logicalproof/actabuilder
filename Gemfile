@@ -8,8 +8,8 @@ gem "cancan", ">= 1.6.7"
 gem "rolify", ">= 3.1.0"
 gem "annotate", "2.4.1.beta1"
 gem 'rack-pjax'
-gem "will_paginate" , "~> 3.0"
-gem "will_paginate-bootstrap"
+# gem "will_paginate" , "~> 3.0"
+# gem "will_paginate-bootstrap"
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
