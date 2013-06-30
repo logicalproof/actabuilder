@@ -5,6 +5,7 @@
 			<td><%= card.arc %></td>
 			<td><%= card.attack_dice %></td>
 			<td><%= Weapon.find(card.weapon_id).special %></td>
+			<td><%= link_to "Edit", edit_weapon_card_path(card), :ship_id => @ship.id %></td>
 	
 		</tr>
 	<% end %>
