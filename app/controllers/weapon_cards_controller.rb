@@ -56,6 +56,7 @@ class WeaponCardsController < ApplicationController
       if @weapon_card.save
         format.html { redirect_to @ship, notice: 'Weapon card was successfully created.' }
         format.json { render json: @weapon_card, status: :created, location: @weapon_card }
+        format.js
       else
         format.html { render action: "new" }
         format.json { render json: @weapon_card.errors, status: :unprocessable_entity }

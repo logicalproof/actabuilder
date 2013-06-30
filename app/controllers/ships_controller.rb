@@ -20,7 +20,12 @@ class ShipsController < ApplicationController
   def show
     @ship = Ship.find(params[:id])
     @weapon = WeaponCard.find_by_ship_id(params[:id])
-    
+    @weapon_card = WeaponCard.new
+    weapon_names = Weapon.all
+    @weapon_names = {}
+    weapon_names.each do |name|
+      @weapon_names[name.name] = name.id
+    end
     respond_to do |format|
       format.html # show.html.erb
       format.json { render json: @ship }

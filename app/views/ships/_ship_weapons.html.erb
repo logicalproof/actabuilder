@@ -1,0 +1,10 @@
+<% @ship.weapon_cards.each do |card| %>
+		<tr>
+			<td><%= Weapon.find(card.weapon_id).name %></td>
+			<td><%= Weapon.find(card.weapon_id).range %></td>
+			<td><%= card.arc %></td>
+			<td><%= card.attack_dice %></td>
+			<td><%= Weapon.find(card.weapon_id).special %></td>
+	
+		</tr>
+	<% end %>

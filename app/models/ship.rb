@@ -17,6 +17,7 @@ class Ship < ActiveRecord::Base
   Weapon.all.each do |name|
     Weapon_names[name.name] = name.id
   end
+  
 end
 # == Schema Information
 #

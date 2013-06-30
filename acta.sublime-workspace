@@ -28,32 +28,66 @@
 	"buffers":
 	[
 		{
-			"contents": "# Place all the behaviors and hooks related to the matching controller here.\n# All this logic will automatically be available in application.js.\n# You can use CoffeeScript in this file: http://jashkenas.github.com/coffee-script/\n$(\"#add_weapon.a\").on(\"click\", function(){\n	$(\"#weapons_list\").removeClass('hidden')\n\n	});",
+			"file": "app/views/weapons/create.js.erb",
+			"settings":
+			{
+				"buffer_size": 127,
+				"line_ending": "Unix"
+			}
+		},
+		{
 			"file": "app/assets/javascripts/weapons.js.coffee",
-			"file_size": 229,
-			"file_write_time": 1372481496000000,
 			"settings":
 			{
-				"buffer_size": 319,
+				"buffer_size": 402,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"contents": "<div class=\"span9 offset1\">\n	<h1>Weapon Inventory</h1>\n\n<table class=\"table table-striped\">\n  <tr id=\"weapons_list\">\n    <%= render \"listed_weapon\" %>\n  </tr>\n\n</table>\n\n<br />	\n\n<div id=\"add_weapon\">\n    <%= link_to 'New Weapon', new_weapon_path %>\n    <%= render 'weapon/form' %>\n</div>\n</div>",
+			"file": "app/views/weapons/_form.html.erb",
+			"settings":
+			{
+				"buffer_size": 811,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/assets/stylesheets/custom.css.scss",
+			"settings":
+			{
+				"buffer_size": 2627,
+				"line_ending": "Unix"
+			}
+		},
+		{
 			"file": "app/views/weapons/index.html.erb",
-			"file_size": 245,
-			"file_write_time": 1372483512000000,
 			"settings":
 			{
-				"buffer_size": 295,
+				"buffer_size": 348,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "app/views/weapons/_listed_weapon.html.erb",
+			"file": "app/views/weapons/_listed_weapons.html.erb",
 			"settings":
 			{
-				"buffer_size": 533,
+				"buffer_size": 563,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/views/weapons/_weapon.html.erb",
+			"settings":
+			{
+				"buffer_size": 539,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/controllers/weapons_controller.rb",
+			"settings":
+			{
+				"buffer_size": 2050,
 				"line_ending": "Unix"
 			}
 		}
@@ -61,19 +95,27 @@
 	"build_system": "Packages/Ruby/Ruby.sublime-build",
 	"command_palette":
 	{
-		"height": 341.0,
+		"height": 309.0,
 		"selected_items":
 		[
+			[
+				"inst",
+				"Package Control: Install Package"
+			],
 			[
 				"ins",
 				"Package Control: Install Package"
 			],
 			[
-				"ke",
+				"user",
 				"Preferences: Key Bindings - User"
 			],
 			[
-				"user",
+				"key",
+				"Preferences: Key Bindings - Default"
+			],
+			[
+				"ke",
 				"Preferences: Key Bindings - User"
 			],
 			[
@@ -149,10 +191,6 @@
 				"Snippet: attr_accessor .."
 			],
 			[
-				"inst",
-				"Package Control: Install Package"
-			],
-			[
 				"snippet do",
 				"Snippet: DOCTYPE HTML"
 			],
@@ -187,6 +225,7 @@
 	"file_history":
 	[
 		"/home/logical-proof/.config/sublime-text-2/Packages/User/Default (Linux).sublime-keymap",
+		"/home/logical-proof/.config/sublime-text-2/Packages/Default/Default (Linux).sublime-keymap",
 		"/home/logical-proof/Dropbox/Developer/actabuilder/app/views/weapons/index.html.erb",
 		"/home/logical-proof/Dropbox/Developer/Isolation/Items/Item.rb",
 		"/home/logical-proof/Dropbox/Developer/Isolation/Items/Resource.rb",
@@ -224,7 +263,7 @@
 	],
 	"find":
 	{
-		"height": 37.0
+		"height": 38.0
 	},
 	"find_in_files":
 	{
@@ -269,18 +308,46 @@
 			[
 				{
 					"buffer": 0,
-					"file": "app/assets/javascripts/weapons.js.coffee",
+					"file": "app/views/weapons/create.js.erb",
 					"settings":
 					{
-						"buffer_size": 319,
+						"buffer_size": 127,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								311,
-								311
+								28,
+								28
+							]
+						],
+						"settings":
+						{
+							"auto_name": "",
+							"syntax": "Packages/Rails/JavaScript (Rails).tmLanguage",
+							"word_wrap": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "app/assets/javascripts/weapons.js.coffee",
+					"settings":
+					{
+						"buffer_size": 402,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								402,
+								402
 							]
 						],
 						"settings":
@@ -292,32 +359,81 @@
 						"zoom_level": 1.0
 					},
 					"type": "text"
-				}
-			]
-		},
-		{
-			"selected": 0,
-			"sheets":
-			[
+				},
 				{
-					"buffer": 1,
-					"file": "app/views/weapons/index.html.erb",
+					"buffer": 2,
+					"file": "app/views/weapons/_form.html.erb",
 					"settings":
 					{
-						"buffer_size": 295,
+						"buffer_size": 811,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								295,
-								295
+								65,
+								65
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/HTML5/Syntaxes/HTML 5.tmLanguage",
+							"syntax": "Packages/Rails/HTML (Rails).tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 195.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "app/assets/stylesheets/custom.css.scss",
+					"settings":
+					{
+						"buffer_size": 2627,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1910,
+								1910
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Sass/Syntaxes/Sass.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 1608.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "app/views/weapons/index.html.erb",
+					"settings":
+					{
+						"buffer_size": 348,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								348,
+								348
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Rails/HTML (Rails).tmLanguage",
 							"tab_size": 4,
 							"translate_tabs_to_spaces": true
 						},
@@ -326,21 +442,27 @@
 						"zoom_level": 1.0
 					},
 					"type": "text"
-				},
+				}
+			]
+		},
+		{
+			"selected": 1,
+			"sheets":
+			[
 				{
-					"buffer": 2,
-					"file": "app/views/weapons/_listed_weapon.html.erb",
+					"buffer": 5,
+					"file": "app/views/weapons/_listed_weapons.html.erb",
 					"settings":
 					{
-						"buffer_size": 533,
+						"buffer_size": 563,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								524,
-								524
+								153,
+								153
 							]
 						],
 						"settings":
@@ -352,6 +474,62 @@
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "app/views/weapons/_weapon.html.erb",
+					"settings":
+					{
+						"buffer_size": 539,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								6,
+								6
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Rails/HTML (Rails).tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "app/controllers/weapons_controller.rb",
+					"settings":
+					{
+						"buffer_size": 2050,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								925,
+								925
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Ruby/Ruby.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 273.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -387,7 +565,7 @@
 		"cols":
 		[
 			0.0,
-			0.44481442252,
+			0.438779939761,
 			1.0
 		],
 		"rows":
