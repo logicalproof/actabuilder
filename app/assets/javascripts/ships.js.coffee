@@ -6,4 +6,10 @@ $(document).ready ->
 		$(".ship_weapon_form").removeClass('hidden')
 	$(".actions input").on "click", ->
 		$(".ship_weapon_form").addClass('hidden')
-		
+	# $(".edit_weapon_link").on "click", ->
+ #        row = $(this).closest("tr")
+ #        ship_id = row.data("id")
+ #        row.after $("#ajax_weapon_form")
+ #        row.addClass("hidden")
+ #        $(".ship_weapon_form").removeClass "hidden"
+	

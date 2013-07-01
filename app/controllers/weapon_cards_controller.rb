@@ -43,6 +43,13 @@ class WeaponCardsController < ApplicationController
   # GET /weapon_cards/1/edit
   def edit
     @weapon_card = WeaponCard.find(params[:id])
+    @ship = Ship.find(params[:ship_id])
+    weapon_names = Weapon.all
+    @weapon_names = {}
+    weapon_names.each do |name|
+      @weapon_names[name.name] = name.id
+    end
+    render "ships/show"
   end
 
   # POST /weapon_cards
@@ -73,6 +80,7 @@ class WeaponCardsController < ApplicationController
       if @weapon_card.update_attributes(params[:weapon_card])
         format.html { redirect_to @weapon_card, notice: 'Weapon card was successfully updated.' }
         format.json { head :no_content }
+        format.js
       else
         format.html { render action: "edit" }
         format.json { render json: @weapon_card.errors, status: :unprocessable_entity }
