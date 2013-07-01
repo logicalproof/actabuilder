@@ -6,10 +6,26 @@ $(document).ready ->
 		$(".ship_weapon_form").removeClass('hidden')
 	$(".actions input").on "click", ->
 		$(".ship_weapon_form").addClass('hidden')
-	# $(".edit_weapon_link").on "click", ->
- #        row = $(this).closest("tr")
- #        ship_id = row.data("id")
- #        row.after $("#ajax_weapon_form")
- #        row.addClass("hidden")
- #        $(".ship_weapon_form").removeClass "hidden"
-	
+	$("#federation_sort").on "click", ->
+		$('.fleet_index').addClass('hidden')
+		$(".Federation").toggleClass("hidden")
+	$("#klingon_sort").on "click", ->
+		$('.fleet_index').addClass('hidden')
+		$(".Klingon").toggleClass("hidden")
+	$("#romulan_sort").on "click", ->
+		$('.fleet_index').addClass('hidden')
+		$(".Romulan").toggleClass("hidden")
+	$("#tholian_sort").on "click", ->
+		$('.fleet_index').addClass('hidden')
+		$(".Tholian").toggleClass("hidden")
+	$("#kzinti_sort").on "click", ->
+		$('.fleet_index').addClass('hidden')
+		$(".Kzinti").toggleClass("hidden")
+	$("#gorn_sort").on "click", ->
+		$('.fleet_index').addClass('hidden')
+		$(".Gorn").toggleClass("hidden")
+	$("#orion_sort").on "click", ->
+		$('.fleet_index').addClass('hidden')
+		$(".Orion").toggleClass("hidden")
+	$("#show_all_empires").on "click", ->
+		$('.fleet_index').removeClass('hidden')

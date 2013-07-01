@@ -1,29 +1,34 @@
+<div class="row">
+	<div id="sort_buttons"><% @empires.each do |empire| %><button id="<%= empire.downcase %>_sort"><%= empire %></button><% end %><button id="show_all_empires">Remove filters</button></div>
 
-<div class="span6">
-	<h1 id="header">A Call To Arms: Starfleet</h1>
-	<h2 id="subheader">Fleet Builder Catalog</h2>
-	<% @ships.each do |ship| %>
-	<div class="span6 <%= Ship::EMPIRES.key(ship.empire_image) %> fleet_index">
-		<div class="span4">	
-		    <div><%= image_tag(ship.empire_image) %>
-			     <h3><%= ship.name %></h3>
-			     <%= Ship::EMPIRES.key(ship.empire_image) %>
+</div>
+
+<div class="row">
+	<div class="span6">
+		<h1 id="header">A Call To Arms: Starfleet</h1>
+		<h2 id="subheader">Fleet Builder Catalog</h2>
+		<% @ships.each do |ship| %>
+		<div class="span6 <%= Ship::EMPIRES.key(ship.empire_image) %> fleet_index">
+			<div class="span4">	
+			    <div><%= image_tag(ship.empire_image) %>
+				     <h3><%= ship.name %></h3>
+				     <%= Ship::EMPIRES.key(ship.empire_image) %>
+				</div>
 			</div>
+			<%= image_tag(ship.image_url)%>
+		    <p>Cost: <b><%= ship.cost %></b></p>
+		   	<%= button_to 'Add to Fleet', assigned_ships_path(ship_id: ship), remote: true, :class => "btn btn-info"%>
 		</div>
-		<%= image_tag(ship.image_url)%>
-	    <p>Cost: <b><%= ship.cost %></b></p>
-	   	<%= button_to 'Add to Fleet', assigned_ships_path(ship_id: ship), remote: true, :class => "btn btn-info"%>
+		<% end %>
+
 	</div>
-	<% end %>
-
+	<div id="fleet_right_container">
+	    <div class="span5" id="fleet_list">
+	    	<% if @fleet_list %>
+			  <%= hidden_div_if(@fleet_list.assigned_ships.empty?, id: 'fleet_list') do%>
+		        <%= render @fleet_list %>
+			  <% end %>
+		    <% end %>
+	    </div>
+	</div>
 </div>
-<div id="fleet_right_container">
-    <div class="span5" id="fleet_list">
-    	<% if @fleet_list %>
-		  <%= hidden_div_if(@fleet_list.assigned_ships.empty?, id: 'fleet_list') do%>
-	        <%= render @fleet_list %>
-		  <% end %>
-	    <% end %>
-    </div>
-</div>
-
