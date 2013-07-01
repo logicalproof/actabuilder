@@ -1,9 +1,12 @@
 
-		<tr>
+		<tr id="weapon_<%= @weapon_card.id %>">
 			<td><%= Weapon.find(@weapon_card.weapon_id).name %></td>
 			<td><%= Weapon.find(@weapon_card.weapon_id).range %></td>
 			<td><%= @weapon_card.arc %></td>
 			<td><%= @weapon_card.attack_dice %></td>
 			<td><%= Weapon.find(@weapon_card.weapon_id).special %></td>
+			<% if can? :create, Ship %>
+			<td class="edit_weapon_link"><%= link_to "Edit", edit_weapon_card_path(@weapon_card, :ship_id => @weapon_card.ship_id), :remote => true %></td>
+			<% end %>
 	
 		</tr>

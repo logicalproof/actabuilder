@@ -1,0 +1,8 @@
+
+$(document).ready(function(){
+	  $("#weapon_<%= @weapon_card.id %>").before("<tr id=\"ajax_weapon_update_form\"><%= escape_javascript(render(:partial => 'weapon_cards/form')) %></tr>");
+	  $("#weapon_<%= @weapon_card.id %>").remove();
+	  // This changes the form from a POST to a PUT request so that 
+	  // the correct Rails action (weapon_card#update) is triggered
+	  $("#ajax_weapon_update_form form").get(0).setAttribute('method', 'put');
+});

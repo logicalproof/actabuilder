@@ -1,11 +1,13 @@
-<% @ship.weapon_cards.each do |card| %>
-		<tr>
+<% @ship.weapon_cards.sort_by { |v| [v[:weapon_id], v[:arc]] }.each do |card| %>
+		<tr id="weapon_<%= card.id %>">
 			<td><%= Weapon.find(card.weapon_id).name %></td>
 			<td><%= Weapon.find(card.weapon_id).range %></td>
 			<td><%= card.arc %></td>
 			<td><%= card.attack_dice %></td>
 			<td><%= Weapon.find(card.weapon_id).special %></td>
-			<td><%= link_to "Edit", edit_weapon_card_path(card), :ship_id => @ship.id %></td>
+			<% if can? :create, Ship %>
+			<td class="edit_weapon_link"><%= link_to "Edit", edit_weapon_card_path(card, :ship_id => @ship.id), :remote => true %></td>
+			<% end %>
 	
 		</tr>
 	<% end %>

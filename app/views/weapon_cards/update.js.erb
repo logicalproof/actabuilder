@@ -1,0 +1,4 @@
+$(document).ready(function(){
+	  $("#ajax_weapon_update_form").before("<%= escape_javascript(render(:partial => 'ships/weapon')) %>");
+	  $("#ajax_weapon_update_form").remove();
+});
