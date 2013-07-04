@@ -1,5 +1,9 @@
 /* remove and hidden class tags are used to hide and 
 add elements for printing*/
+body {
+	height: 100px;
+	width: 200px;
+}
 .remove {
 	display: none;
 }
