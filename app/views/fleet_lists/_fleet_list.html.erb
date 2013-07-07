@@ -9,5 +9,5 @@
   	<td class="total_cell" id="total_td"> <%= fleet_list.total_cost %></td>
   </tr>	
 </table>
-<%= link_to 'Print', fleet_sheet_path(:ship_id => "10", :fleet_ids => @fleet_list.assigned_ships), method: :get, :class => "btn btn-danger" %></div>	
+<%= link_to 'Print', fleet_sheet_path(:fleet_ids => @fleet_list.assigned_ships), method: :get, :class => "btn btn-info" %></div>	
 </div>
