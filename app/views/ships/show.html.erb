@@ -57,7 +57,10 @@
 		<% if @ship.enhanced_bridge %>
 		  <li><b>Enhanced Bridge </b></li>
 		<% end %>
-	
+
+		<% if @ship.escort %>
+		  <li><b>Escort </b></li>
+		<% end %>
 	
 		<% if @ship.fast %>
 		     <li><b>Fast </b></li>
@@ -71,11 +74,6 @@
 	
 		<% unless @ship.labs == 0 %>
 		    <li><b>Labs <%= @ship.labs %></b></li>
-		<% end %>
-	
-	
-		<% if @ship.lumbering %>
-		    <li><b>Lumbering </b></li>
 		<% end %>
 	
 	

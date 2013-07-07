@@ -3,12 +3,15 @@
   margin: 10mm 10mm 10mm 10mm;
 }*/
 .ssd_sheets {
-	width: 440px;
+	width: 425px;
 	height: 635px;
 	display: inline-block;
 	page-break-after: always;
+	border: solid black 1px;
 	.ship_header {
 		height: 150px;
+		position: relative;
+		left: 10px;
 	}
 
 	.tables {

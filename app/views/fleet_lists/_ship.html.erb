@@ -139,11 +139,13 @@
           <li>Command + <%= ship.command %></li>
         <% end %>
       
-      
         <% if ship.enhanced_bridge %>
           <li>Enhanced Bridge </li>
         <% end %>
-      
+
+        <% if ship.escort %>
+          <li><b>Escort </b></li>
+        <% end %>
       
         <% if ship.fast %>
              <li>Fast </li>
@@ -158,13 +160,7 @@
         <% unless ship.labs == 0 %>
             <li>Labs <%= ship.labs %></li>
         <% end %>
-      
-      
-        <% if ship.lumbering %>
-            <li>Lumbering </li>
-        <% end %>
-      
-      
+
         <% if ship.no_probes %>
             <li>No Probes </li>
         <% end %>
@@ -277,7 +273,7 @@
                   </tr>
               </thead>
               <tbody>
-                <% ship.weapon_cards.each do |x| %>
+                <% ship.weapon_cards.sort_by { |v| [v[:weapon_id], v[:arc]] }.each do |x| %>
                   <tr>
                     <th><%= @weapon_names[(x.weapon_id.to_i - 1)].name %></th>
                     <td><%= @weapon_names[(x.weapon_id.to_i - 1)].range %></td>

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120422224733) do
+ActiveRecord::Schema.define(:version => 20130707223656) do
 
   create_table "assigned_ships", :force => true do |t|
     t.integer  "ship_id"
@@ -48,7 +48,6 @@ ActiveRecord::Schema.define(:version => 20120422224733) do
     t.boolean  "fast",            :default => false
     t.boolean  "immobile",        :default => false
     t.integer  "labs",            :default => 0
-    t.boolean  "lumbering",       :default => false
     t.boolean  "no_probes",       :default => false
     t.boolean  "quick_launch",    :default => false
     t.boolean  "scout",           :default => false
@@ -56,6 +55,7 @@ ActiveRecord::Schema.define(:version => 20120422224733) do
     t.integer  "stealth",         :default => 0
     t.integer  "tractor_beam",    :default => 0
     t.integer  "transporter",     :default => 0
+    t.boolean  "escort",          :default => false
   end
 
   create_table "users", :force => true do |t|

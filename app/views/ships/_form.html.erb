@@ -69,27 +69,27 @@
 					<%= f.label :cloak, "Cloak:" %>
 		    		<%= f.check_box(:cloak)%>
 			</td>
-		    <td>
-					<%= f.label :enhanced_bridge, "Enhanced Bridge:" %>
-		    		<%= f.check_box(:enhanced_bridge)%>
+		  <td>
+					<%= f.label :escort, "Escort:" %>
+		    	<%= f.check_box(:escort)%>
 			</td>
 		</tr>
-		<tr>	 	
+		<tr>
+      <td>
+          <%= f.label :enhanced_bridge, "Enhanced Bridge:" %>
+          <%= f.check_box(:enhanced_bridge)%>
+      </td>
 			<td>
 				    <%= f.label :fast, "Fast:" %>
 				    <%= f.check_box(:fast)%>
 			</td>  
 		    <td>
 				 	<%= f.label :immobile, "Immobile:" %>
-		    	    <%= f.check_box(:immobile)%>
+		    	<%= f.check_box(:immobile)%>
 			</td>   
-		    <td>
-				    <%= f.label :lumbering, "Lumbering:" %>
-		    	    <%= f.check_box(:lumbering)%>
-			</td>   
-		    <td>    
-				    <%= f.label :no_probes, "No Probes:" %>
-		    	    <%= f.check_box(:no_probes)%>
+		  <td>    
+				  <%= f.label :no_probes, "No Probes:" %>
+		    	<%= f.check_box(:no_probes)%>
 			</td>   
 		</tr>
 		<tr>	   
