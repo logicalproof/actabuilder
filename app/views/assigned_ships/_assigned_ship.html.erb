@@ -9,4 +9,5 @@
   	<td class="ship_cost" id="ship_cost"><%= assigned_ship.total_cost%></td>
 	<td><div class="btn-group"><%= link_to 'View', "/ships/#{assigned_ship.ship.id}", method: :get, :class => "btn btn-info" %>
 	<%= link_to 'Remove', decrement_assigned_ship_path(assigned_ship), method: :post, remote: true, :class => "btn btn-danger" %></div></td>
+  <%= link_to 'Print', fleet_sheet_path(:ship_id => assigned_ship.ship_id), method: :get, :class => "btn btn-danger" %></div></td>
  </tr>

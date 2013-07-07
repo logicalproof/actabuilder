@@ -1,0 +1,127 @@
+/*@page
+{
+  margin: 10mm 10mm 10mm 10mm;
+}*/
+.ssd_sheets {
+	width: 440px;
+	height: 635px;
+	display: inline-block;
+	page-break-after: always;
+	.ship_header {
+		height: 150px;
+	}
+
+	.tables {
+		width: 60px;
+		border: solid white 2px;
+		font-size: 7px;
+	}
+
+	h1 {
+		font-size: 20px;
+	}
+	h2 {
+		font-size: 17px;
+	}
+
+	/*Critical Tables*/
+	
+
+
+	/*Ship Tables*/
+	.ship {
+		width: 40px;
+	}
+
+	.ship td{
+		width: 7px;
+		height: 7px;
+		border: solid black 1px;
+	}
+	.ship_damage_tables { 
+		position: absolute;
+		height: 485px;
+
+		.damage_table {
+			position: absolute;
+			top: 0px;
+			left: 385px;
+			font-size: 7px;
+			text-align: center;
+			tbody tr td {
+				border: solid red 1px;
+			}
+			.cripple_td {
+				background-color: pink;
+			}
+		}
+		.shields_table {
+			position: relative;
+			left: 10px;
+			font-size: 7px;
+			text-align: center;
+			td {
+				border: solid blue 1px;
+			}
+		}
+	}
+
+	/* Ship Information Tables*/
+	.ship_info_tables {
+		position: relative;
+		left: 110px;
+		.info {
+			width: 200px;
+			text-align: center;
+			font-size: 12px;
+			border: solid black 1px;
+			td {
+				font-size: 12px;
+				border: solid black 1px;
+				width: 33%;
+			}
+		}
+		.ship_traits {
+			position: relative;
+			font-size: 10px;
+			width: 100px;
+			left: 110px;
+		}
+		.critical_tables table {
+			width: 172px;
+			height: 25px;
+			border-color: white;
+			position: relative;
+			left: -60px;
+			top: -60px;
+			td {
+				width: 14px;
+				text-align: center;
+				border: solid black 1px;
+			}
+		}
+	}
+	
+
+
+	/*Ship Weapon Tables*/
+	.ship_weapons_tables {
+			.weapons {
+			  width: 324px;
+			  font-size: 7px;
+			  position: relative;
+			  top: -40px;
+			  left: -60px;
+	
+				th {
+				  text-align: left;
+				  border-bottom: solid black 1px;
+				  border-right: solid black 1px;
+				  font-size: 7px;
+				}
+				td {
+					border-bottom: dotted black 1px;
+				}
+			}
+		}
+	}

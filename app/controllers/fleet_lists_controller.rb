@@ -87,4 +87,14 @@ class FleetListsController < ApplicationController
       format.json { head :no_content }
     end
   end
+
+  def print
+    fleet_ids = params[:fleet_ids]
+    @ships = []
+    fleet_ids.each {|x| @ships << Ship.find(AssignedShip.find(x).ship_id)}
+    # @ship = Ship.find(params[:ship_id])
+    @weapon_names = Weapon.all
+    render layout: false
+
+  end
 end

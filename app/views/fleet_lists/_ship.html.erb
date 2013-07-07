@@ -1,0 +1,293 @@
+
+<div class="ssd_sheets">
+  <div class="ship_header">
+    <h1 class="ship_name"><%= ship.name %></h1>
+    <h2 class="ship_points"></h2><%= ship.cost %></h2>
+  </div>
+  <div class="ship_damage_tables">
+      <table class="shields_table">
+          <thead>
+              <tr>
+                  <th colspan="2">Shields</th>
+                </tr>
+          </thead>
+          <tbody>
+            <% 0.upto(ship.shield + ((ship.shield/10)*6)-1) do |x| %>
+              <% if ship.shield.even? %>
+                <% if x.even? %>
+                  <% if x > ship.shield %>
+                    <tr>
+                      <td>B</td>
+                  <% else %>
+                    <tr>
+                      <td><%= x %></td>
+                  <% end %>
+                  <% if (x + 1)> ship.shield %>
+                      <td>B</td>
+                    </tr>
+                  <% else %>
+                      <td><%= x+1 %></td>
+                    </tr>                
+                  <% end %>
+                <% end %>
+              <% else %>
+                <% if x.odd? %>
+                  <% if x > ship.shield %>
+                    <tr>
+                      <td>B</td>
+                  <% else %>
+                    <tr>
+                      <td><%= x %></td>
+                  <% end %>
+                  <% if (x+1) > ship.shield %>
+                      <td>B</td>
+                    </tr>
+                  <% else %>
+                      <td><%= x+1 %></td>
+                    </tr>                
+                  <% end %>
+                <% end %>
+              <% end %>
+            <% end %>
+          </tbody>
+      </table>
+
+      <table class="damage_table">
+          <thead>
+              <tr>
+                  <th colspan="2">Damage</th>
+              </tr>
+          </thead>
+          <tbody>
+            <% (ship.damage).downto(1) do |x| %>
+              <% if ship.damage.even? %>
+                <% if x.even? %>
+                  <% if x == ship.cripple_value %>
+                    <tr>
+                      <td class="cripple_td">C</td>
+                  <% else %>
+                    <tr>
+                      <td><%= x %></td>
+                  <% end %>
+                  <% if (x-1) == ship.cripple_value %>
+                      <td class="cripple_td">C</td>
+                    </tr>
+                  <% else %>
+                      <td><%= x-1 %></td>
+                    </tr>                
+                  <% end %>
+                <% end %>
+              <% else %>
+                <% if x.odd? %>
+                  <% if x == ship.cripple_value %>
+                    <tr>
+                      <td class="cripple_td">C</td>
+                  <% else %>
+                    <tr>
+                      <td><%= x %></td>
+                  <% end %>
+                  <% if (x-1) == ship.cripple_value %>
+                      <td class="cripple_td">C</td>
+                    </tr>
+                  <% else %>
+                      <td><%= x-1 %></td>
+                    </tr>                
+                  <% end %>
+                <% end %>
+              <% end %>
+            <% end %>
+          </tbody>
+      </table>
+  </div>
+  <div class="ship_info_tables">
+      <table class="info tables">
+          <tbody>
+              <tr>
+                  <th>Turn:</th>
+                  <th>Marines:</th>
+                  <th>Craft:</th>
+              </tr>
+              <tr>
+                  <td><%= ship.turn %></td>   
+                  <td><%= ship.marines %></td>
+                  <td><%= ship.craft %></td>
+              </tr>
+          </tbody>
+      </table>
+      <ul class="ship_traits">
+        <% if ship.agile %>
+          <li>Agile </li>
+        <% end %>
+      
+      
+        <% unless ship.anti_drone == 0 %>
+          <li>Anti-Drone <%= ship.anti_drone %></li>
+        <% end %>
+      
+      
+        <% if ship.armoured %>
+          <li>Armoured </li>
+        <% end %>
+      
+      
+        <% if ship.cloak %>
+          <li>Cloak </li>
+        <% end %>
+      
+      
+        <% unless ship.command == 0 %>
+          <li>Command + <%= ship.command %></li>
+        <% end %>
+      
+      
+        <% if ship.enhanced_bridge %>
+          <li>Enhanced Bridge </li>
+        <% end %>
+      
+      
+        <% if ship.fast %>
+             <li>Fast </li>
+        <% end %>
+      
+      
+        <% if ship.immobile %>
+            <li>Immobile </li>
+        <% end %>
+      
+      
+        <% unless ship.labs == 0 %>
+            <li>Labs <%= ship.labs %></li>
+        <% end %>
+      
+      
+        <% if ship.lumbering %>
+            <li>Lumbering </li>
+        <% end %>
+      
+      
+        <% if ship.no_probes %>
+            <li>No Probes </li>
+        <% end %>
+      
+      
+        <% if ship.quick_launch %>
+            <li>Quick Launch </li>
+        <% end %>
+      
+      
+        <% if ship.scout %>
+            <li>Scout </li>
+        <% end %>
+      
+      
+        <% if ship.slow %>
+            <li>Slow </li>
+        <% end %>
+      
+      
+        <% unless ship.stealth == 0 %>
+            <li>Stealth <%= ship.stealth %></li>
+        <% end %>
+      
+      
+        <% unless ship.tractor_beam == 0 %>
+             <li>Tractor Beams <%= ship.tractor_beam %></li>
+        <% end %>
+      
+        <% unless ship.transporter == 0 %>
+            <li> Transporters <%= ship.transporter %></li>
+        <% end %>
+      </ul>
+      <div class="critical_tables">
+          <table class="critical tables">
+              <tbody>
+                  <tr>
+                      <th>Impulse</th>
+                      <td>0</td>
+                      <td>1</td>
+                      <td>2</td>
+                      <td>3</td>
+                      <td>D6</td>
+                      <td>2D6</td>
+                  </tr>
+              </tbody>
+          </table>
+          <table class="critical tables">
+              <tbody>
+                  <tr>
+                      <th>Dilithium</th>
+                      <td>0</td>
+                      <td>1</td>
+                      <td>2</td>
+                      <td>3</td>
+                      <td>D6</td>
+                      <td>*</td>
+                  </tr>
+              </tbody>
+          </table>
+          <table class="critical tables">
+              <tbody>
+                  <tr>
+                      <th>Weapon</th>
+                      <td>0</td>
+                      <td>1</td>
+                      <td>2</td>
+                      <td>3</td>
+                      <td>D6</td>
+                      <td>D6</td>
+                  </tr>
+              </tbody>
+          </table>
+          <table class="critical tables">
+              <tbody>
+                  <tr>
+                      <th>Crew</th>
+                      <td>0</td>
+                      <td>1</td>
+                      <td>2</td>
+                      <td>3</td>
+                      <td>D6</td>
+                      <td>D6</td>
+                  </tr>
+              </tbody>
+          </table>
+          <table class="critical tables">
+              <tbody>
+                  <tr>
+                      <th>Shield</th>
+                      <td>0</td>
+                      <td>1</td>
+                      <td>2</td>
+                      <td>3</td>
+                      <td>D6</td>
+                      <td>2D6</td>
+                  </tr>
+              </tbody>
+          </table>
+      </div>
+      <div class="ship_weapons_tables">
+          <table class="weapons">
+              <thead>
+                  <tr>
+                      <th>NAME</th>
+                      <th>RNG</th>
+                      <th>ARC</th>
+                      <th>AD</th>
+                      <th>SPECIALS</th>
+                  </tr>
+              </thead>
+              <tbody>
+                <% ship.weapon_cards.each do |x| %>
+                  <tr>
+                    <th><%= @weapon_names[(x.weapon_id.to_i - 1)].name %></th>
+                    <td><%= @weapon_names[(x.weapon_id.to_i - 1)].range %></td>
+                    <td><%= x.arc %></td>
+                    <td><%= x.attack_dice %></td>
+                    <td><%= @weapon_names[(x.weapon_id.to_i - 1)].special %></td>
+                  </tr>
+                <% end %>
+              </tbody>
+          </table>
+      </div>
+  </div>
+</div>

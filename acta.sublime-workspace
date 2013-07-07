@@ -28,66 +28,10 @@
 	"buffers":
 	[
 		{
-			"file": "app/views/weapons/create.js.erb",
+			"file": "config/routes.rb",
 			"settings":
 			{
-				"buffer_size": 127,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "app/assets/javascripts/weapons.js.coffee",
-			"settings":
-			{
-				"buffer_size": 402,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "app/views/weapons/_form.html.erb",
-			"settings":
-			{
-				"buffer_size": 811,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "app/assets/stylesheets/custom.css.scss",
-			"settings":
-			{
-				"buffer_size": 2627,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "app/views/weapons/index.html.erb",
-			"settings":
-			{
-				"buffer_size": 348,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "app/views/weapons/_listed_weapons.html.erb",
-			"settings":
-			{
-				"buffer_size": 563,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "app/views/weapons/_weapon.html.erb",
-			"settings":
-			{
-				"buffer_size": 539,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "app/controllers/weapons_controller.rb",
-			"settings":
-			{
-				"buffer_size": 2050,
+				"buffer_size": 2414,
 				"line_ending": "Unix"
 			}
 		}
@@ -224,6 +168,14 @@
 	},
 	"file_history":
 	[
+		"/Users/logical_proof/Dropbox/Developer/actabuilder/app/controllers/weapons_controller.rb",
+		"/Users/logical_proof/Dropbox/Developer/actabuilder/app/views/weapons/_weapon.html.erb",
+		"/Users/logical_proof/Dropbox/Developer/actabuilder/app/views/weapons/_listed_weapons.html.erb",
+		"/Users/logical_proof/Dropbox/Developer/actabuilder/app/assets/stylesheets/custom.css.scss",
+		"/Users/logical_proof/Dropbox/Developer/actabuilder/app/views/weapons/_form.html.erb",
+		"/Users/logical_proof/Dropbox/Developer/actabuilder/app/assets/javascripts/weapons.js.coffee",
+		"/Users/logical_proof/Dropbox/Developer/actabuilder/app/views/weapons/index.html.erb",
+		"/Users/logical_proof/Dropbox/Developer/actabuilder/app/views/weapons/create.js.erb",
 		"/home/logical-proof/.config/sublime-text-2/Packages/User/Default (Linux).sublime-keymap",
 		"/home/logical-proof/.config/sublime-text-2/Packages/Default/Default (Linux).sublime-keymap",
 		"/home/logical-proof/Dropbox/Developer/actabuilder/app/views/weapons/index.html.erb",
@@ -308,133 +260,68 @@
 			[
 				{
 					"buffer": 0,
-					"file": "app/views/weapons/create.js.erb",
+					"file": "config/routes.rb",
 					"settings":
 					{
-						"buffer_size": 127,
+						"buffer_size": 2414,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								28,
-								28
+								626,
+								626
 							]
 						],
 						"settings":
 						{
-							"auto_name": "",
-							"syntax": "Packages/Rails/JavaScript (Rails).tmLanguage",
-							"word_wrap": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "app/assets/javascripts/weapons.js.coffee",
-					"settings":
-					{
-						"buffer_size": 402,
-						"regions":
-						{
-						},
-						"selection":
-						[
+							"BracketHighlighterBusy": false,
+							"bh_regions":
 							[
-								402,
-								402
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/CoffeeScript/CoffeeScript.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "app/views/weapons/_form.html.erb",
-					"settings":
-					{
-						"buffer_size": 811,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								65,
-								65
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Rails/HTML (Rails).tmLanguage",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close"
+							],
+							"syntax": "Packages/Ruby/Ruby.tmLanguage",
 							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 195.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"file": "app/assets/stylesheets/custom.css.scss",
-					"settings":
-					{
-						"buffer_size": 2627,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1910,
-								1910
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Sass/Syntaxes/Sass.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 1608.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 4,
-					"file": "app/views/weapons/index.html.erb",
-					"settings":
-					{
-						"buffer_size": 348,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								348,
-								348
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Rails/HTML (Rails).tmLanguage",
-							"tab_size": 4,
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
@@ -446,94 +333,8 @@
 			]
 		},
 		{
-			"selected": 1,
 			"sheets":
 			[
-				{
-					"buffer": 5,
-					"file": "app/views/weapons/_listed_weapons.html.erb",
-					"settings":
-					{
-						"buffer_size": 563,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								153,
-								153
-							]
-						],
-						"settings":
-						{
-							"auto_name": "",
-							"syntax": "Packages/Rails/HTML (Rails).tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 6,
-					"file": "app/views/weapons/_weapon.html.erb",
-					"settings":
-					{
-						"buffer_size": 539,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								6,
-								6
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Rails/HTML (Rails).tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 7,
-					"file": "app/controllers/weapons_controller.rb",
-					"settings":
-					{
-						"buffer_size": 2050,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								925,
-								925
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Ruby/Ruby.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 273.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				}
 			]
 		}
 	],

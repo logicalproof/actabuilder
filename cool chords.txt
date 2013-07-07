@@ -1,3 +1,9 @@
 D, A, F#m, G
 Bm, A, G, D
 
+@ship = Ship by ID
+@weapons = WeaponCards for this ship
+@weapon_names = Names of all the weapons
+
+Weapon Cards have many Weapons
+Ship has many WeaponCards
