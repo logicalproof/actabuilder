@@ -12,9 +12,9 @@
                 </tr>
           </thead>
           <tbody>
-            <% 0.upto(ship.shield + ((ship.shield/10)*6)-1) do |x| %>
-              <% if ship.shield.even? %>
-                <% if x.even? %>
+            <% 1.upto(ship.shield + ((ship.shield/10)*6)) do |x| %>
+              <% if ship.shield.odd? %>
+                <% if x.odd? %>
                   <% if x > ship.shield %>
                     <tr>
                       <td>B</td>
@@ -114,86 +114,6 @@
               </tr>
           </tbody>
       </table>
-      <ul class="ship_traits">
-        <% if ship.agile %>
-          <li>Agile </li>
-        <% end %>
-      
-      
-        <% unless ship.anti_drone == 0 %>
-          <li>Anti-Drone <%= ship.anti_drone %></li>
-        <% end %>
-      
-      
-        <% if ship.armoured %>
-          <li>Armoured </li>
-        <% end %>
-      
-      
-        <% if ship.cloak %>
-          <li>Cloak </li>
-        <% end %>
-      
-      
-        <% unless ship.command == 0 %>
-          <li>Command + <%= ship.command %></li>
-        <% end %>
-      
-        <% if ship.enhanced_bridge %>
-          <li>Enhanced Bridge </li>
-        <% end %>
-
-        <% if ship.escort %>
-          <li><b>Escort </b></li>
-        <% end %>
-      
-        <% if ship.fast %>
-             <li>Fast </li>
-        <% end %>
-      
-      
-        <% if ship.immobile %>
-            <li>Immobile </li>
-        <% end %>
-      
-      
-        <% unless ship.labs == 0 %>
-            <li>Labs <%= ship.labs %></li>
-        <% end %>
-
-        <% if ship.no_probes %>
-            <li>No Probes </li>
-        <% end %>
-      
-      
-        <% if ship.quick_launch %>
-            <li>Quick Launch </li>
-        <% end %>
-      
-      
-        <% if ship.scout %>
-            <li>Scout </li>
-        <% end %>
-      
-      
-        <% if ship.slow %>
-            <li>Slow </li>
-        <% end %>
-      
-      
-        <% unless ship.stealth == 0 %>
-            <li>Stealth <%= ship.stealth %></li>
-        <% end %>
-      
-      
-        <% unless ship.tractor_beam == 0 %>
-             <li>Tractor Beams <%= ship.tractor_beam %></li>
-        <% end %>
-      
-        <% unless ship.transporter == 0 %>
-            <li> Transporters <%= ship.transporter %></li>
-        <% end %>
-      </ul>
       <div class="critical_tables">
           <table class="critical tables">
               <tbody>
@@ -261,6 +181,59 @@
               </tbody>
           </table>
       </div>
+      <ul class="ship_traits">
+        <% if ship.agile %>
+          <li>Agile </li>
+        <% end %>
+        <% unless ship.anti_drone == 0 %>
+          <li>Anti-Drone <%= ship.anti_drone %></li>
+        <% end %>
+        <% if ship.armoured %>
+          <li>Armoured </li>
+        <% end %>
+        <% if ship.cloak %>
+          <li>Cloak </li>
+        <% end %>
+        <% unless ship.command == 0 %>
+          <li>Command + <%= ship.command %></li>
+        <% end %>
+        <% if ship.enhanced_bridge %>
+          <li>Enhanced Bridge </li>
+        <% end %>
+        <% if ship.escort %>
+          <li><b>Escort </b></li>
+        <% end %>
+        <% if ship.fast %>
+             <li>Fast </li>
+        <% end %>
+        <% if ship.immobile %>
+            <li>Immobile </li>
+        <% end %>
+        <% unless ship.labs == 0 %>
+            <li>Labs <%= ship.labs %></li>
+        <% end %>
+        <% if ship.no_probes %>
+            <li>No Probes </li>
+        <% end %>
+        <% if ship.quick_launch %>
+            <li>Quick Launch </li>
+        <% end %>
+        <% if ship.scout %>
+            <li>Scout </li>
+        <% end %>
+        <% if ship.slow %>
+            <li>Slow </li>
+        <% end %>
+        <% unless ship.stealth == 0 %>
+            <li>Stealth <%= ship.stealth %></li>
+        <% end %>
+        <% unless ship.tractor_beam == 0 %>
+             <li>Tractor Beams <%= ship.tractor_beam %></li>
+        <% end %>
+        <% unless ship.transporter == 0 %>
+            <li> Transporters <%= ship.transporter %></li>
+        <% end %>
+      </ul>
       <div class="ship_weapons_tables">
           <table class="weapons">
               <thead>
